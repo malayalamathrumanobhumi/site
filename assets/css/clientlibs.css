@@ -20817,8 +20817,10 @@ screen and (-ms-high-contrast: none) {
 
 .articletext{
   font-family: 'Rachana', sans-serif;
-  font-size: 18px;
+  font-size: 16.5px;
   padding-top: 25px;
+  line-height: 18pt;
+  text-align: justify;
 }
 
 
