@@ -1,0 +1,12 @@
+.topHeader.premium-label {
+    display: none;
+  }
+  @media screen and (max-width: 800px) {
+    .mm-container.ml-top-nav {
+      display: none !important;
+    }
+  }
+  div#StickyFooter {
+    display: none !important;
+  }
+

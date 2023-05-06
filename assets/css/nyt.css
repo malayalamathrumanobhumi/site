@@ -1,0 +1,1399 @@
+  div { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font-size: 100%; 
+      -ms-text-size-adjust: 100%; 
+      -moz-text-size-adjust: 100%; 
+      -webkit-text-size-adjust: 100%; 
+      text-size-adjust: 100%; 
+      font: inherit; 
+      vertical-align: baseline;
+  } 
+  
+  .css-1r6wvpq { 
+      opacity: 1; 
+      visibility: visible; 
+      -webkit-animation-name: animation-5j8bii; 
+      animation-name: animation-5j8bii; 
+      -webkit-animation-duration: 300ms; 
+      animation-duration: 300ms; 
+      -webkit-animation-delay: 0ms; 
+      animation-delay: 0ms; 
+      -webkit-animation-timing-function: ease-out; 
+      animation-timing-function: ease-out;
+  } 
+  
+  body { 
+      margin:    0;
+      padding:      0; 
+      border:      0; 
+      font-size:      100%; 
+      -ms-text-size-adjust:      100%; 
+      -moz-text-size-adjust:      100%; 
+      -webkit-text-size-adjust:      100%; 
+      text-size-adjust:      100%; 
+      font:      inherit; 
+      vertical-align:      baseline;
+      line-height:     1;
+      color:  var(--color-content-primary,#121212); 
+      background-color:    white;
+      height:   100%; 
+      overflow-x:  hidden;
+      background: var(--color-background-primary,#FFFFFF);
+  } 
+  
+  html { 
+      margin:   0;
+      padding:   0; 
+      border:   0; 
+      font-size:  100%;
+      -ms-text-size-adjust:   100%; 
+      -moz-text-size-adjust:   100%; 
+      -webkit-text-size-adjust:   100%; 
+      text-size-adjust:   100%; 
+      font:  -apple-system-body; 
+      vertical-align:   baseline;
+      height:  100%; 
+  } 
+  
+  :root { 
+      --color-background-primary:  hsla(0,0%,100%,1); 
+      --color-content-primary:  hsla(0,0%,7.06%,1); 
+  } 
+  
+  header { 
+      display: block;
+      margin:  0; 
+      padding:  0; 
+      border:  0; 
+      font-size:  100%; 
+      -ms-text-size-adjust:  100%; 
+      -moz-text-size-adjust:  100%; 
+      -webkit-text-size-adjust:  100%; 
+      text-size-adjust:  100%; 
+      font:  inherit; 
+      vertical-align:  baseline;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-ahe4g0 { 
+      position:  relative; 
+      border-bottom:  none;
+      margin: 0 auto; 
+      padding: 0 3%;
+    } 
+  }     
+  
+  @media (min-width: 1150px){ 
+    .css-ahe4g0 { 
+      margin: auto; 
+      padding: 0 3%; 
+      max-width: 1200px;
+    } 
+  }     
+  
+  section { 
+      display: block;
+      margin:  0; 
+      padding:  0; 
+      border:  0; 
+      font-size:  100%; 
+      -ms-text-size-adjust:  100%; 
+      -moz-text-size-adjust:  100%; 
+      -webkit-text-size-adjust:  100%; 
+      text-size-adjust:  100%; 
+      font:  inherit; 
+      vertical-align:  baseline;
+  } 
+  
+  .css-9kr9i3 { 
+      background: #fff; 
+      border-bottom: 1px solid #e2e2e2; 
+      height: 36px; 
+      padding: 8px 15px 3px; 
+      position: relative;
+  } 
+  
+  @media (min-width: 740px){ 
+    .css-9kr9i3 { 
+      background: #fff; 
+      padding: 10px 15px 6px;
+    } 
+  }     
+  
+  @media (min-width: 1024px){ 
+    .css-9kr9i3 { 
+      background:  transparent; 
+      border-bottom:  0; 
+      padding:  4px 15px 8px;
+      margin: 0 auto; 
+      max-width: 1605px;
+    } 
+  }     
+  
+  .css-1oajkic { 
+      -webkit-align-items: center; 
+      -webkit-box-align: center; 
+      -ms-flex-align: center; 
+      align-items: center; 
+      display: -webkit-box; 
+      display: -webkit-flex; 
+      display: -ms-flexbox; 
+      display: flex; 
+      font-family: nyt-franklin,helvetica,arial,sans-serif; 
+      font-size: 11px; 
+      -webkit-box-pack: space-around; 
+      -webkit-justify-content: space-around; 
+      -ms-flex-pack: space-around; 
+      justify-content: space-around; 
+      padding: 13px 20px 12px; 
+      border-bottom: 1px solid #e2e2e2; 
+      background-color: #f7f7f7;
+  } 
+  
+  @media (min-width: 740px){ 
+    .css-1oajkic { 
+      background-color:  #fff;
+      position: relative;
+    } 
+  }     
+  
+  @media (min-width: 1024px){ 
+    .css-1oajkic { 
+      -webkit-box-pack: justify; 
+      -webkit-justify-content: space-between; 
+      -ms-flex-pack: justify; 
+      justify-content: space-between; 
+      border: none; 
+      padding: 0; 
+      height: 0; 
+      -webkit-transform: translateY(38px); 
+      -ms-transform: translateY(38px); 
+      transform: translateY(38px); 
+      -webkit-align-items: flex-end; 
+      -webkit-box-align: flex-end; 
+      -ms-flex-align: flex-end; 
+      align-items: flex-end;
+    } 
+  }     
+  
+  .css-stscvm { 
+      display: none;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-stscvm { 
+      display: block; 
+      margin-top: -15px;
+    } 
+  }     
+  
+  .css-wu78io { 
+      position: fixed; 
+      top: -120px; 
+      left: 0; 
+      width: 100%; 
+      height: 120px; 
+      z-index: 100001; 
+      background: #fff;
+  } 
+  
+  .css-1y7qxpi { 
+      box-shadow: 0 0 5px 1px rgba(0,0,0,0.28); 
+      background: #fff; 
+      position: fixed; 
+      width: 100%; 
+      -webkit-transform: translateY(-70px); 
+      -ms-transform: translateY(-70px); 
+      transform: translateY(-70px); 
+      top: 0; 
+      left: 0; 
+      z-index: 100000; 
+      -webkit-transition: 0.5s cubic-bezier(0.23,1,0.32,1); 
+      transition: 0.5s cubic-bezier(0.23,1,0.32,1);
+  } 
+  
+  .css-umysuv { 
+      border-top: 1px solid #ebebeb; 
+      display: none; 
+      border-bottom: 1px solid #000; 
+      padding-top: 2px; 
+      padding-bottom: 2px;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-umysuv { 
+      display: block;
+    } 
+  }     
+  
+  .css-umysuv:after { 
+      content: ''; 
+      border-bottom: 1px double #000; 
+      display: block;
+  } 
+  
+  .css-qo6pn { 
+      display: -webkit-box; 
+      display: -webkit-flex; 
+      display: -ms-flexbox; 
+      display: flex; 
+      -webkit-box-pack: space-around; 
+      -webkit-justify-content: space-around; 
+      -ms-flex-pack: space-around; 
+      justify-content: space-around; 
+      left: 10px; 
+      position: absolute;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-qo6pn { 
+      left: 0;
+    } 
+  }     
+  
+  .css-8xdxq2 { 
+      text-align: center;
+  } 
+  
+  @media (min-width: 740px){ 
+    .css-8xdxq2 { 
+      padding-top: 0;
+    } 
+  }     
+  
+  @media (min-width: 1024px){ 
+    .css-8xdxq2 { 
+      display: none;
+    } 
+  }     
+  
+  .css-8pe5zk { 
+      display: none; 
+      text-align: center;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-8pe5zk { 
+      display: block;
+    } 
+  }     
+  
+  .css-12bivf2 { 
+      display: -webkit-box; 
+      display: -webkit-flex; 
+      display: -ms-flexbox; 
+      display: flex; 
+      -webkit-box-pack: space-around; 
+      -webkit-justify-content: space-around; 
+      -ms-flex-pack: space-around; 
+      justify-content: space-around; 
+      position: absolute; 
+      right: 10px; 
+      top: 9px;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-12bivf2 { 
+      top: 4px; 
+      right: 0;
+    } 
+  }     
+  
+  .css-103zufb { 
+      display: none;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-103zufb { 
+      display: unset;
+    } 
+  }     
+  
+  .css-9e9ivx { 
+      display: none; 
+      font-size: 10px; 
+      margin-left: auto; 
+      text-transform: uppercase;
+  } 
+  
+  .hasLinks .css-9e9ivx  { 
+      display: block;
+  } 
+  
+  @media (min-width: 740px){ 
+    .hasLinks .css-9e9ivx  { 
+      margin: none; 
+      position: absolute; 
+      right: 20px;
+    } 
+  }     
+  
+  @media (min-width: 1024px){ 
+    .hasLinks .css-9e9ivx  { 
+      display: none;
+    } 
+  
+    .css-158f1cv { 
+      text-align: center;
+    } 
+  }     
+  
+  .css-1llhclm { 
+      margin: 0 auto; 
+      padding: 0 3%; 
+      max-width: 1200px; 
+      white-space: nowrap;
+  } 
+  
+  ul { 
+      margin:  0; 
+      padding:  0; 
+      border:  0; 
+      font-size:  100%; 
+      -ms-text-size-adjust:  100%; 
+      -moz-text-size-adjust:  100%; 
+      -webkit-text-size-adjust:  100%; 
+      text-size-adjust:  100%; 
+      font:  inherit; 
+      vertical-align:  baseline;
+      list-style: none;
+  } 
+  
+  .css-397oyn { 
+      -webkit-align-items: center; 
+      -webkit-box-align: center; 
+      -ms-flex-align: center; 
+      align-items: center; 
+      display: -webkit-box; 
+      display: -webkit-flex; 
+      display: -ms-flexbox; 
+      display: flex; 
+      -webkit-box-pack: justify; 
+      -webkit-justify-content: space-between; 
+      -ms-flex-pack: justify; 
+      justify-content: space-between; 
+      padding: 5px 0 4px; 
+      margin: 0 20px;
+  } 
+  
+  @media (min-width: 1150px){ 
+    .css-397oyn { 
+      margin: 0 60px;
+    } 
+  }     
+  
+  .css-6n7j50 { 
+      display: inline;
+  } 
+  
+  button { 
+      color:     black;
+      margin:   0; 
+      font-size:    100%;
+      vertical-align:   middle;
+      padding:  0; 
+      border:  none; 
+      line-height:  normal;
+      cursor: pointer; 
+      -webkit-appearance: button;
+  } 
+  
+  .css-123u7tk { 
+      border-radius: 3px; 
+      cursor: pointer; 
+      font-family: nyt-franklin,helvetica,arial,sans-serif; 
+      -webkit-transition: ease 0.6s; 
+      transition: ease 0.6s; 
+      white-space: nowrap; 
+      vertical-align: middle; 
+      background-color: #fff; 
+      border: 1px solid #ebebeb; 
+      color: #333; 
+      font-size: 11px; 
+      line-height: 11px; 
+      font-weight: 500; 
+      -webkit-letter-spacing: 0.02em; 
+      -moz-letter-spacing: 0.02em; 
+      -ms-letter-spacing: 0.02em; 
+      letter-spacing: 0.02em; 
+      padding: 8px 9px 9px; 
+      text-transform: uppercase; 
+      display: none;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-123u7tk { 
+      border: 0; 
+      display: inline-block; 
+      margin-right: 8px;
+    } 
+  }     
+  
+  @media (min-width: 740px){ 
+    .css-123u7tk:hover { 
+      background-color: #f7f7f7;
+    } 
+  }     
+  
+  .css-10488qs { 
+      display: none;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-10488qs { 
+      display: inline-block; 
+      position: relative;
+    } 
+  }     
+  
+  a { 
+      margin:  0; 
+      padding:  0; 
+      border:  0; 
+      font-size:  100%; 
+      -ms-text-size-adjust:  100%; 
+      -moz-text-size-adjust:  100%; 
+      -webkit-text-size-adjust:  100%; 
+      text-size-adjust:  100%; 
+      font:  inherit; 
+      vertical-align:  baseline;
+      text-decoration: none; 
+      color: black;
+  } 
+  
+  .css-nhjhh0 { 
+      display: block; 
+      width: 189px; 
+      height: 26px; 
+      margin: 5px auto 0;
+  } 
+  
+  @media (min-width: 740px){ 
+    .css-nhjhh0 { 
+      width: 225px; 
+      height: 31px; 
+      margin: 4px auto 0;
+    } 
+  }     
+  
+  @media (min-width: 1024px){ 
+    .css-nhjhh0 { 
+      width: 195px; 
+      height: 26px; 
+      margin: 6px auto 0;
+    } 
+  }     
+  
+  .css-5wt1bj { 
+      color: #666; 
+      -webkit-letter-spacing: 0.03em; 
+      -moz-letter-spacing: 0.03em; 
+      -ms-letter-spacing: 0.03em; 
+      letter-spacing: 0.03em; 
+      margin-top: 2px;
+  } 
+  
+  .css-1kj7lfb { 
+      display: none;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-1kj7lfb { 
+      display: inline-block; 
+      margin-right: 7px;
+    } 
+  }     
+  
+  .css-129gw94 { 
+      line-height: 0;
+  } 
+  
+  .css-1ts4sjb { 
+      color: #121212; 
+      font-size: 0.6875rem; 
+      font-family: nyt-franklin,helvetica,arial,sans-serif; 
+      display: block; 
+      width: auto; 
+      font-weight: 700;
+  } 
+  
+  @media (min-width: 740px){ 
+    .css-1ts4sjb { 
+      text-align: center; 
+      width: 100%;
+    } 
+  }     
+  
+  @media (min-width: 1024px){ 
+    .css-1ts4sjb { 
+      font-size: 12px; 
+      width: auto; 
+      margin-bottom: 5px;
+    } 
+  }     
+  
+  .css-bfvq22 { 
+      display: none;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-bfvq22 { 
+      display: block;
+    } 
+  }     
+  
+  .css-27ffgo { 
+      display: flex; 
+      flex-direction: column; 
+      width: 100%; 
+      min-width: 105px;
+  } 
+  
+  .css-1q2j1fr { 
+      display: block; 
+      width: 189px; 
+      height: 26px; 
+      margin: 4px auto 0;
+  } 
+  
+  @media (min-width: 740px){ 
+    .css-1q2j1fr { 
+      width: 225px; 
+      height: 31px; 
+      margin: 3px auto 0;
+    } 
+  }     
+  
+  @media (min-width: 1024px){ 
+    .css-1q2j1fr { 
+      width: 430px; 
+      height: 58px; 
+      margin: 6px auto;
+    } 
+  }     
+  
+  .css-1llhclm .css-397oyn  { 
+      margin: 0;
+  } 
+  
+  li { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font-size: 100%; 
+      -ms-text-size-adjust: 100%; 
+      -moz-text-size-adjust: 100%; 
+      -webkit-text-size-adjust: 100%; 
+      text-size-adjust: 100%; 
+      font: inherit; 
+      vertical-align: baseline;
+  } 
+  
+  .css-cwdrld { 
+      display: inline-block; 
+      font-family: nyt-franklin,helvetica,arial,sans-serif; 
+      font-size: 0.75rem; 
+      line-height: 1rem; 
+      font-weight: 500;
+  } 
+  
+  .css-144qvsq { 
+      display: inline-block; 
+      font-family: nyt-franklin,helvetica,arial,sans-serif; 
+      font-size: 0.75rem; 
+      line-height: 1rem; 
+      font-weight: 500; 
+      position: relative; 
+      padding-left: 20px;
+  } 
+  
+  .css-144qvsq:before { 
+      content: ''; 
+      height: 20px; 
+      position: absolute; 
+      left: 6px; 
+      top: 2px; 
+      border-left: 1px solid #e2e2e2;
+  } 
+  
+  .css-fzvsed { 
+      border-radius: 3px; 
+      cursor: pointer; 
+      font-family: nyt-franklin,helvetica,arial,sans-serif; 
+      -webkit-transition: ease 0.6s; 
+      transition: ease 0.6s; 
+      white-space: nowrap; 
+      vertical-align: middle; 
+      background-color: transparent; 
+      color: #000; 
+      font-size: 11px; 
+      line-height: 11px; 
+      font-weight: 700; 
+      -webkit-letter-spacing: 0.02em; 
+      -moz-letter-spacing: 0.02em; 
+      -ms-letter-spacing: 0.02em; 
+      letter-spacing: 0.02em; 
+      padding: 8px 9px; 
+      border: 0; 
+      text-transform: uppercase;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-fzvsed { 
+      display: none;
+    } 
+  }     
+  
+  @media (min-width: 740px){ 
+    .css-fzvsed:hover { 
+      background-color: #f7f7f7;
+    } 
+  }     
+  
+  span { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font-size: 100%; 
+      -ms-text-size-adjust: 100%; 
+      -moz-text-size-adjust: 100%; 
+      -webkit-text-size-adjust: 100%; 
+      text-size-adjust: 100%; 
+      font: inherit; 
+      vertical-align: baseline;
+  } 
+  
+  .css-1dv1kvn { 
+      border: 0; 
+      -webkit-clip: rect(0 0 0 0); 
+      clip: rect(0 0 0 0); 
+      height: 1px; 
+      margin: -1px; 
+      overflow: hidden; 
+      padding: 0; 
+      position: absolute; 
+      width: 1px;
+  } 
+  
+  .css-1fe7a5q { 
+      display: inline-block; 
+      height: 16px; 
+      vertical-align: sub; 
+      width: 16px;
+  } 
+  
+  .css-tkwi90 { 
+      border-radius: 3px; 
+      cursor: pointer; 
+      font-family: nyt-franklin,helvetica,arial,sans-serif; 
+      -webkit-transition: ease 0.6s; 
+      transition: ease 0.6s; 
+      white-space: nowrap; 
+      vertical-align: middle; 
+      background-color: transparent; 
+      color: #000; 
+      font-size: 11px; 
+      line-height: 11px; 
+      font-weight: 700; 
+      -webkit-letter-spacing: 0.02em; 
+      -moz-letter-spacing: 0.02em; 
+      -ms-letter-spacing: 0.02em; 
+      letter-spacing: 0.02em; 
+      padding: 11px 12px 8px; 
+      border: 0;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-tkwi90 { 
+      padding: 8px 9px 9px;
+    } 
+  }     
+  
+  @media (min-width: 740px){ 
+    .css-tkwi90:hover { 
+      background-color: #f7f7f7;
+    } 
+  }     
+  
+  .css-vktqhz { 
+      display: inline-block; 
+      font-family: nyt-franklin,helvetica,arial,sans-serif; 
+      font-size: 10px; 
+      text-transform: uppercase; 
+      color: #121212; 
+      font-weight: 700; 
+      display: inline-block; 
+      font-family: nyt-franklin,helvetica,arial,sans-serif;
+  } 
+  
+  .css-vktqhz:first-child { 
+      margin-left: 0;
+  } 
+  
+  .css-1vlye70 { 
+      display: inline-block; 
+      font-family: nyt-franklin,helvetica,arial,sans-serif; 
+      font-size: 10px; 
+      text-transform: uppercase; 
+      color: #000; 
+      font-weight: 500;
+  } 
+  
+  .css-gfqyex { 
+      border-radius: 3px; 
+      cursor: pointer; 
+      transition: all 0.6s ease 0s; 
+      white-space: nowrap; 
+      vertical-align: middle; 
+      background-color: transparent; 
+      color: rgb(50, 104, 145); 
+      display: inline-block; 
+      font: inherit; 
+      padding: inherit; 
+      letter-spacing: inherit;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-gfqyex { 
+      border-radius: 3px; 
+      cursor: pointer; 
+      font-family: nyt-franklin, helvetica, arial, sans-serif; 
+      transition: all 0.6s ease 0s; 
+      white-space: nowrap; 
+      vertical-align: middle; 
+      background-color: rgb(86, 123, 149); 
+      border: 1px solid rgb(50, 104, 145); 
+      font-size: 11px; 
+      line-height: 11px; 
+      font-weight: 700; 
+      letter-spacing: 0.05em; 
+      text-transform: uppercase; 
+      padding: 8px 12px; 
+      height: 11px; 
+      color: rgb(255, 255, 255); 
+      margin-right: 7px;
+    } 
+  }     
+  
+  @media (min-width: 740px){ 
+    .css-gfqyex:hover { 
+      background-color:  rgb(50, 104, 145);
+    } 
+  }     
+  
+  @media (min-width: 1024px){ 
+    .css-gfqyex:hover { 
+      border: 1px solid rgb(50, 104, 145);
+    } 
+  }     
+  
+  .css-ni9it0 { 
+      border-radius: 3px; 
+      cursor: pointer; 
+      font-family: nyt-franklin, helvetica, arial, sans-serif; 
+      transition: all 0.6s ease 0s; 
+      white-space: nowrap; 
+      vertical-align: middle; 
+      background-color: rgb(86, 123, 149); 
+      border: 1px solid rgb(50, 104, 145); 
+      color: rgb(255, 255, 255); 
+      font-size: 11px; 
+      line-height: 11px; 
+      font-weight: 700; 
+      letter-spacing: 0.05em; 
+      padding: 11px 12px 8px; 
+      text-transform: uppercase; 
+      display: inline-block;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-ni9it0 { 
+      padding: 8px 12px; 
+      height: 11px; 
+      color: rgb(255, 255, 255) !important;
+    } 
+  }     
+  
+  @media (min-width: 740px){ 
+    .css-ni9it0:hover { 
+      background-color: rgb(50, 104, 145);
+    } 
+  }     
+  
+  .css-ni9it0:hover { 
+      border: 1px solid rgb(50, 104, 145);
+  } 
+  
+  .css-e1ifge { 
+      display: inline-block; 
+      padding: 4px;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-e1ifge { 
+      display: none;
+    } 
+  }     
+  
+  .css-hnzl8o { 
+      display: inline-block; 
+      font-size: 12px; 
+      -webkit-transition: color 0.6s ease; 
+      transition: color 0.6s ease; 
+      color: #121212;
+  } 
+  
+  .css-hnzl8o:hover { 
+      color: #666;
+  } 
+  
+  .css-1wjnrbv { 
+      border-radius: 3px; 
+      display: inline-block; 
+      padding: 4px; 
+      -webkit-transition: background 0.6s ease; 
+      transition: background 0.6s ease; 
+      vertical-align: middle;
+  } 
+  
+  .css-1wjnrbv:hover { 
+      background-color: #f7f7f7;
+  } 
+  
+  .css-ogiugu { 
+      display: inline-block; 
+      border-radius: 3px; 
+      padding: 7px 10px;
+  } 
+  
+  @media (min-width: 1024px){ 
+    .css-ogiugu { 
+      padding: 7px 8px 6px; 
+      -webkit-transition: background 0.6s ease; 
+      transition: background 0.6s ease;
+    } 
+  }     
+  
+  .css-ogiugu:hover { 
+      background-color: #f7f7f7;
+  } 
+  
+  .css-1p66nw2 { 
+      display: block; 
+      width: 24px; 
+      height: 24px;
+  } 
+  
+  .css-zykn71 { 
+      display: flex; 
+      opacity: 100; 
+      animation: 0s ease 0s 1 normal none running none; 
+      -webkit-box-pack: justify; 
+      justify-content: space-between; 
+      -webkit-box-align: baseline; 
+      align-items: baseline; 
+      padding: 3px 0px 4px;
+  } 
+  
+  @media (min-width: 1069.99999px){ 
+    .css-zykn71 { 
+      -webkit-box-align: baseline; 
+      align-items: baseline; 
+      display: none; 
+      opacity: 0; 
+      flex-direction: row; 
+      width: 100%; 
+      padding: 0px;
+    } 
+  }     
+  
+  .css-zykn71:first-child { 
+      border-top: 0px;
+  } 
+  
+  .css-x1sij0 { 
+      display: flex; 
+      -webkit-box-align: baseline; 
+      align-items: baseline;
+  } 
+  
+  .css-m7oyll { 
+      display: flex; 
+      opacity: 100; 
+      animation: 0s ease 0s 1 normal none running none; 
+      -webkit-box-pack: justify; 
+      justify-content: space-between; 
+      -webkit-box-align: baseline; 
+      align-items: baseline; 
+      padding: 3px 0px 4px;
+  } 
+  
+  @media (min-width: 1069.99999px){ 
+    .css-m7oyll { 
+      -webkit-box-align: baseline; 
+      align-items: baseline; 
+      opacity: 0; 
+      flex-direction: row; 
+      padding: 0px; 
+      animation: 5s ease 0s 1 normal forwards running animation-7y3qfv; 
+      display: flex; 
+      width: 100%;
+    } 
+  }     
+  
+  .css-1k9ek97 { 
+      background-color: #fff;
+  } 
+  
+  .css-1s40g2l { 
+      color: rgb(18, 18, 18); 
+      font-family: nyt-franklin, helvetica, arial, sans-serif; 
+      font-size: 0.75rem;
+  } 
+  
+  .css-4dbexh { 
+      font-family: nyt-franklin, helvetica, arial, sans-serif; 
+      font-size: 0.75rem; 
+      margin-right: 5px; 
+      color: rgb(166, 27, 30);
+  } 
+  
+  .css-4ky835 { 
+      transform: rotate(180deg);
+  } 
+  
+  .css-1hd1ne6 { 
+      width: 16px; 
+      height: 16px; 
+      padding: 0 4px; 
+      background-color: #fff;
+  } 
+  
+  .css-tmjxlh { 
+      width: 14px; 
+      height: 17px; 
+      margin: 1px 0 0; 
+      padding: 0 4px;
+  } 
+  
+  
+  /* These were inline style tags. Uses id+class to override almost everything */
+  #style-yXJ1o.style-yXJ1o {  
+     visibility:hidden;  
+  }  
+  
+
+ 
+  div { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font-size: 100%; 
+      -ms-text-size-adjust: 100%; 
+      -moz-text-size-adjust: 100%; 
+      -webkit-text-size-adjust: 100%; 
+      text-size-adjust: 100%; 
+      font: inherit; 
+      vertical-align: baseline;
+  } 
+  
+  body { 
+      margin:    0;
+      padding:      0; 
+      border:      0; 
+      font-size:      100%; 
+      -ms-text-size-adjust:      100%; 
+      -moz-text-size-adjust:      100%; 
+      -webkit-text-size-adjust:      100%; 
+      text-size-adjust:      100%; 
+      font:      inherit; 
+      vertical-align:      baseline;
+      line-height:     1;
+      color:  var(--color-content-primary,#121212); 
+      background-color:    white;
+      height:   100%; 
+      overflow-x:  hidden;
+      background: var(--color-background-primary,#FFFFFF);
+  } 
+  
+  html { 
+      margin:   0;
+      padding:   0; 
+      border:   0; 
+      font-size:  100%;
+      -ms-text-size-adjust:   100%; 
+      -moz-text-size-adjust:   100%; 
+      -webkit-text-size-adjust:   100%; 
+      text-size-adjust:   100%; 
+      font:  -apple-system-body; 
+      vertical-align:   baseline;
+      height:  100%; 
+  } 
+  
+  :root { 
+      --color-background-primary: hsla(0,0%,100%,1); 
+      --color-content-primary: hsla(0,0%,7.06%,1); 
+  } 
+  
+  nav { 
+      display: block;
+      margin:  0; 
+      padding:  0; 
+      border:  0; 
+      font-size:  100%; 
+      -ms-text-size-adjust:  100%; 
+      -moz-text-size-adjust:  100%; 
+      -webkit-text-size-adjust:  100%; 
+      text-size-adjust:  100%; 
+      font:  inherit; 
+      vertical-align:  baseline;
+  } 
+  
+  @media (min-width: 1150px){ 
+    .css-kdur8l { 
+      margin: 0 auto; 
+      max-width: 1200px; 
+      padding: 0 3% 9px;
+    } 
+  }     
+  
+  .css-kdur8l:before { 
+      background-color: #fff; 
+      border-bottom: 1px solid #e2e2e2; 
+      border-top: 2px solid #e2e2e2; 
+      content: ''; 
+      display: block; 
+      height: 1px; 
+      margin-top: 0;
+  } 
+  
+  h2 { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font-size: 100%; 
+      -ms-text-size-adjust: 100%; 
+      -moz-text-size-adjust: 100%; 
+      -webkit-text-size-adjust: 100%; 
+      text-size-adjust: 100%; 
+      font: inherit; 
+      vertical-align: baseline;
+  } 
+  
+  .css-1dv1kvn { 
+      border: 0; 
+      -webkit-clip: rect(0 0 0 0); 
+      clip: rect(0 0 0 0); 
+      height: 1px; 
+      margin: -1px; 
+      overflow: hidden; 
+      padding: 0; 
+      position: absolute; 
+      width: 1px;
+  } 
+  
+  .css-uw59u { 
+      padding: 0px 20px;
+  } 
+  
+  @media (min-width: 740px){ 
+    .css-uw59u { 
+      padding: 0px 3%;
+    } 
+  }     
+  
+  @media (min-width: 1150px){ 
+    .css-uw59u { 
+      padding: 0px;
+    } 
+  }     
+  
+  header { 
+      display: block;
+      margin:  0; 
+      padding:  0; 
+      border:  0; 
+      font-size:  100%; 
+      -ms-text-size-adjust:  100%; 
+      -moz-text-size-adjust:  100%; 
+      -webkit-text-size-adjust:  100%; 
+      text-size-adjust:  100%; 
+      font:  inherit; 
+      vertical-align:  baseline;
+  } 
+  
+  .css-jxzr5i { 
+      display: flex; 
+      flex-flow: row;
+  } 
+  
+  .css-qtw155 { 
+      display: block;
+  } 
+  
+  @media (min-width: 1150px){ 
+    .css-qtw155 { 
+      display: none;
+    } 
+  }     
+  
+  .css-v0l3hm { 
+      display: none;
+  } 
+  
+  @media (min-width: 1150px){ 
+    .css-v0l3hm { 
+      display: block;
+    } 
+  }     
+  
+  a { 
+      margin:  0; 
+      padding:  0; 
+      border:  0; 
+      font-size:  100%; 
+      -ms-text-size-adjust:  100%; 
+      -moz-text-size-adjust:  100%; 
+      -webkit-text-size-adjust:  100%; 
+      text-size-adjust:  100%; 
+      font:  inherit; 
+      vertical-align:  baseline;
+      text-decoration: none; 
+      color: black;
+  } 
+  
+  .css-g4gku8 { 
+      display: flex; 
+      margin-top: 10px; 
+      min-width: 600px;
+  } 
+  
+  .css-oylsik { 
+      display: block; 
+      height: 44px; 
+      vertical-align: middle; 
+      width: 184px;
+  } 
+  
+  section { 
+      display: block;
+      margin:  0; 
+      padding:  0; 
+      border:  0; 
+      font-size:  100%; 
+      -ms-text-size-adjust:  100%; 
+      -moz-text-size-adjust:  100%; 
+      -webkit-text-size-adjust:  100%; 
+      text-size-adjust:  100%; 
+      font:  inherit; 
+      vertical-align:  baseline;
+  } 
+  
+  .css-1rr4qq7 { 
+      -webkit-flex: 1; 
+      -ms-flex: 1; 
+      flex: 1;
+  } 
+  
+  .css-6xhk3s { 
+      border-left: 1px solid rgb(226, 226, 226); 
+      flex: 1 1 0%; 
+      padding-left: 15px;
+  } 
+  
+  .css-1a5mdf6 { 
+      cursor: pointer; 
+      margin: 0px; 
+      border-top: 1px solid rgb(235, 235, 235); 
+      color: rgb(51, 51, 51); 
+      font-family: nyt-franklin, helvetica, arial, sans-serif; 
+      font-size: 13px; 
+      font-weight: 700; 
+      height: 44px; 
+      letter-spacing: 0.04rem; 
+      line-height: 44px; 
+      text-transform: uppercase;
+  } 
+  
+  .css-1hyfx7x { 
+      display: none;
+  } 
+  
+  h3 { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font-size: 100%; 
+      -ms-text-size-adjust: 100%; 
+      -moz-text-size-adjust: 100%; 
+      -webkit-text-size-adjust: 100%; 
+      text-size-adjust: 100%; 
+      font: inherit; 
+      vertical-align: baseline;
+  } 
+  
+  .css-1onhbft { 
+      color: rgb(51, 51, 51); 
+      font-size: 13px; 
+      font-weight: 700; 
+      font-family: nyt-franklin, helvetica, arial, sans-serif; 
+      height: 25px; 
+      line-height: 15px; 
+      margin: 0px; 
+      text-transform: uppercase; 
+      width: 150px;
+  } 
+  
+  ul { 
+      margin:  0; 
+      padding:  0; 
+      border:  0; 
+      font-size:  100%; 
+      -ms-text-size-adjust:  100%; 
+      -moz-text-size-adjust:  100%; 
+      -webkit-text-size-adjust:  100%; 
+      text-size-adjust:  100%; 
+      font:  inherit; 
+      vertical-align:  baseline;
+      list-style: none;
+  } 
+  
+  .css-1iruc8t { 
+      list-style: none; 
+      margin: 0px; 
+      padding: 0px;
+  } 
+  
+  .css-6td9kr { 
+      list-style: none; 
+      margin: 2px 0px 0px; 
+      padding: 10px 0px 0px; 
+      border-top: 1px solid rgb(226, 226, 226);
+  } 
+  
+  .css-1gprdgz { 
+      list-style: none; 
+      margin: 0px; 
+      columns: 2; 
+      padding: 0px 0px 15px;
+  } 
+  
+  li { 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font-size: 100%; 
+      -ms-text-size-adjust: 100%; 
+      -moz-text-size-adjust: 100%; 
+      -webkit-text-size-adjust: 100%; 
+      text-size-adjust: 100%; 
+      font: inherit; 
+      vertical-align: baseline;
+  } 
+  
+  @media (min-width: 740px){ 
+    .css-ist4u3.smartphone { 
+      display: none;
+    } 
+  }     
+  
+  .css-tj0ten { 
+      margin-bottom: 5px; 
+      white-space: nowrap;
+  } 
+  
+  .css-tj0ten:last-child { 
+      margin-bottom: 10px;
+  } 
+  
+  .css-10t7hia { 
+      height: 34px; 
+      line-height: 34px; 
+      list-style-type: none;
+  } 
+  
+  @media (min-width: 740px){ 
+    .css-10t7hia.smartphone { 
+      display: none;
+    } 
+  }     
+  
+  .css-wbbhzv { 
+      color: rgb(0, 0, 0); 
+      display: inline-block; 
+      font-family: nyt-franklin, helvetica, arial, sans-serif; 
+      text-decoration: none; 
+      text-transform: capitalize; 
+      width: 150px; 
+      font-size: 14px; 
+      font-weight: 500; 
+      height: 23px; 
+      line-height: 16px;
+  } 
+  
+  .css-wbbhzv:hover { 
+      cursor: pointer; 
+      text-decoration: underline;
+  } 
+  
+  .css-1oyjjn8 { 
+      color: rgb(0, 0, 0); 
+      display: inline-block; 
+      font-family: nyt-franklin, helvetica, arial, sans-serif; 
+      text-decoration: none; 
+      text-transform: capitalize; 
+      width: 150px; 
+      font-size: 16px; 
+      font-weight: 700; 
+      height: 25px; 
+      line-height: 15px; 
+      padding-bottom: 0px;
+  } 
+  
+  .css-1oyjjn8:hover { 
+      cursor: pointer; 
+      text-decoration: underline;
+  } 
+  
+  .css-1jmp9xk { 
+      color: rgb(0, 0, 0); 
+      display: inline-block; 
+      font-family: nyt-franklin, helvetica, arial, sans-serif; 
+      text-decoration: none; 
+      text-transform: capitalize; 
+      width: 150px; 
+      font-size: 11px; 
+      font-weight: 500; 
+      height: 23px; 
+      line-height: 21px;
+  } 
+  
+  .css-1jmp9xk:hover { 
+      cursor: pointer; 
+      text-decoration: underline;
+  } 
+  
+  .css-e9w26l { 
+      color: rgb(51, 51, 51); 
+      display: block; 
+      font-family: nyt-franklin, helvetica, arial, sans-serif; 
+      font-size: 15px; 
+      font-weight: 500; 
+      height: 34px; 
+      line-height: 34px; 
+      text-decoration: none; 
+      text-transform: capitalize;
+  } 
+  
+  .css-r5ic95 { 
+      display: inline-block; 
+      height: 13px; 
+      width: 13px; 
+      margin-right: 7px; 
+      vertical-align: middle;
+  } 
+  
+  
+  

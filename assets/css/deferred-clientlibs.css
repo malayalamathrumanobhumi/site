@@ -1,0 +1,433 @@
+/* Weather ..*/
+.d-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .flx-algn-R {
+    justify-content: flex-end;
+  }
+  
+  .weatherDisplayWeb,
+  .weatherDisplayMob {
+    width: 100%;
+    font-family: roboto;
+  }
+  
+  .weatherDisplayWeb .icon {
+    margin-right: 5px;
+    width: 40px;
+    display: inline-block;
+  }
+  
+  .weatherDisplayMob .wthr-detail-blk .icon {
+    width: 50px;
+    display: inline-block;
+    margin-right: 5px;
+  }
+  
+  .weatherDisplayWeb .icon img,
+  .wthr-detail-blk .icon img {
+    width: 100%;
+  }
+  
+  .weatherDisplayWeb .top-blk {
+    width: 100%;
+  }
+  
+  .temp-display-blk {
+    display: block;
+  }
+  
+  .temp-display-blk {
+    font-size: 42px;
+    font-weight: 300;
+    white-space: nowrap;
+    display: inline-block;
+  }
+  
+  .place-dropdown-list {
+    padding: 5px;
+  }
+  
+  .place-dropdown {
+    font-size: 13px;
+    padding: 3px 24px 3px 5px;
+    background: #fff;
+    border-radius: 6px;
+    position: relative;
+    z-index: 10;
+    min-width: 160px;
+  }
+  
+  .place-dropdown ul,
+  .place-dropdown ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .place-dropdown ul li {
+    transition: all 1s linear;
+  }
+  
+  .place-show-blk {
+    width: 100%;
+    position: absolute;
+    background: #fff;
+    top: 24px;
+    z-index: 1000000;
+    -webkit-box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 2px 10px -2px rgba(0, 0, 0, 0.35);
+    display: none;
+  }
+  
+  .place-dropdown:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -3px;
+    border-width: 6px 6px 0 6px;
+    border-style: solid;
+    border-color: #ff9e32 transparent;
+  }
+  
+  .temp-cl-grey {
+    color: #ccc;
+    font-size: 22px;
+  }
+  
+  .place-list {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #e3e3e3;
+    text-align: left;
+    padding: 0 10px;
+  }
+  
+  .place-list a {
+    text-align: center;
+    padding: 0 10px;
+    display: block;
+    transition: all 0.4s linear;
+  }
+  
+  .place-list a:hover {
+    background: rgba(0, 0, 0, 0.111);
+    color: #0495db;
+  }
+  
+  .selected-place {
+    cursor: pointer;
+    text-align: right;
+    padding-right: 3px;
+  }
+  
+  /* -------------- Mobile widget ---------------- */
+  .flx-algn-RL {
+    justify-content: space-between;
+  }
+  
+  .weatherDisplayMob {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 7px;
+    border: 1px solid #f2f2f2;
+    margin: 10px auto;
+    padding: 10px;
+  }
+  
+  .weatherDisplayMob .top {
+    width: 100%;
+    height: 24px;
+  }
+  
+  .weatherDisplayMob .middle,
+  .weatherDisplayMob .bottom {
+    width: 100%;
+    padding: 5px 0;
+  }
+  
+  .weatherDisplayMob .logo {
+    width: 100%;
+    max-width: 119px;
+    text-align: left;
+    position: inherit;
+  }
+  
+  .weatherDisplayMob .logo img {
+    max-width: 100%;
+  }
+  
+  .wthr-place-blk {
+    width: auto;
+    font-size: 13px;
+    color: #878787;
+    font-weight: 500;
+  }
+  
+  .wthr-place-blk .location-icon {
+    width: 10px;
+    height: 19px;
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .weatherDisplayMob .middle {
+    height: 80px;
+  }
+  
+  .weatherDisplayMob .middle .wthr-detail-blk {
+    width: 30%;
+  }
+  
+  .weatherDisplayMob .middle .wthr-comingDays-blk {
+    width: 70%;
+    padding-left: 15%;
+  }
+  
+  .first-blk {
+    width: 100%;
+    padding: 5px 0 0 0;
+  }
+  
+  .wthr-info-txt,
+  .wthr-bottom-txt {
+    font-size: 12px;
+    color: #7c7b7b;
+    line-height: 13px;
+    font-weight: 500;
+  }
+  
+  .wthr-bottom-txt {
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .updation-info-blk {
+    width: 100%;
+    padding: 10px 0 0 0;
+  }
+  
+  .t-align-R {
+    text-align: right;
+  }
+  
+  .t-align-L {
+    text-align: left;
+  }
+  
+  .wthr-comingDays-blk ul,
+  .wthr-comingDays-blk ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .wthr-Ul,
+  .wthr-List {
+    width: 100%;
+  }
+  
+  .wthr-List {
+    width: 33%;
+    padding: 5px 0;
+    float: left;
+  }
+  
+  .wthr-Day-Name,
+  .wthr-icon-blk,
+  .wthr-temp-blk,
+  .wthr-spon-logo-block-mob,
+  .title-text {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    color: #878787;
+  }
+  
+  .wthr-spon-logo {
+    max-width: 80px;
+    margin: 5px auto;
+  }
+  
+  .wthr-temp-blk .high {
+    color: #333;
+  }
+  
+  .wthr-temp-blk .low {
+    color: #7c7b7b;
+  }
+  
+  .wthr-icon-blk {
+    width: 40px;
+    margin: auto;
+  }
+  
+  .wthr-icon-blk img {
+    max-width: 100%;
+  }
+  
+  .wthr-temp-blk {
+    padding: 0 0 5px 0;
+  }
+  
+  .clr-grey {
+    color: #878787;
+  }
+  
+  .wthr-list-show {
+    display: block;
+    transition: aii 1s linear;
+  }
+  
+  .wthr-drop-active-outer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    display: none;
+  }
+  
+  .weatherDisplayMob .middle .temp-cl-grey {
+    font-size: 42px;
+  }
+  
+  .weatherDisplayMob,
+  .weatherDisplayMob a,
+  .weatherDisplayMob a:focus {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  }
+  
+  /***************************UI ******************************/
+  
+  .place-list:hover {
+    background: rgba(0, 0, 0, 0.111);
+    color: #0495db;
+  }
+  
+  
+  .place-list {
+    text-align: center;
+    padding: 0 10px;
+    display: block;
+    transition: all 0.4s linear;
+    cursor: pointer;
+  }
+  
+  .location-icon img {
+    width: 10px;
+  }
+  
+  .weatherDisplayWeb {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-top: 6px;
+    width: auto;
+  }
+  
+  .place-dropdown::after {
+    cursor: pointer;
+  }
+  
+  .weatherDisplayMob {
+    display: none;
+  }
+  
+  .place-dropdown::after {
+    display: none;
+  }
+  
+  .spons-wrap {
+    position: relative;
+  }
+  
+  .place-dropdown.visible::after {
+    display: block;
+  }
+  
+  .wthr-spon-logo-block-mob {
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 10px;
+  }
+  
+  /* *********** **************** **************** Responsive Media Queries **************** **************** **************** */
+  @media screen and (max-width: 780px) {
+    .weatherDisplayWeb {
+      display: none;
+    }
+  
+    .weatherDisplayMob {
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: 801px) {
+    .spons-wrap {
+        width: 80px;
+        height: 40px;
+        position: absolute;
+        top: 4px;
+        right: 168px;
+        margin-top: 6px;
+    }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .spons-wrap {
+        display: none !important;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .temp-display-blk {
+      font-size: 34px;
+    }
+  
+    .weatherDisplayMob .middle .wthr-comingDays-blk {
+      padding-left: 10%;
+    }
+  
+    .weatherDisplayMob .middle .temp-cl-grey {
+      font-size: 34px;
+    }
+  }
+  
+  @media screen and (max-width: 420px) {
+    .weatherDisplayMob .middle .wthr-detail-blk {
+      width: 40%;
+    }
+  }
+  
+  @media screen and (max-width: 390px) {
+    .wthr-comingDays-blk ul li:last-child {
+      display: none;
+    }
+  
+    .wthr-List {
+      width: 50%;
+    }
+  
+    .temp-display-blk {
+      font-size: 30px;
+    }
+  }
+  
+  /* *********** **************** **************** Responsive Media Queries **************** **************** **************** */
+  .accuweather-mob-hide {
+    display: none;
+  }

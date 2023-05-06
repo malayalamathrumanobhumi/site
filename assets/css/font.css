@@ -1,0 +1,30 @@
+@import url('https://smc.org.in/fonts/anjalioldlipi.css'); 
+@import url('https://smc.org.in/fonts/chilanka.css'); 
+@import url('https://smc.org.in/fonts/dyuthi.css'); 
+@import url('https://smc.org.in/fonts/gayathri.css'); 
+@import url('https://smc.org.in/fonts/karumbi.css');  
+@import url('https://smc.org.in/fonts/keraleeyam.css'); 
+@import url('https://smc.org.in/fonts/manjari.css'); 
+@import url('https://smc.org.in/fonts/meera.css'); 
+@import url('https://smc.org.in/fonts/rachana.css'); 
+@import url('https://smc.org.in/fonts/raghumalayalamsans.css'); 
+@import url('https://smc.org.in/fonts/suruma.css'); 
+@import url('https://smc.org.in/fonts/uroob.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face { font-family: 'Manorama Regular'; src: url('../font/Manorama Regular.tf') format('truetype'); }
+
+#a { font-family: 'AnjaliOldLipi', sans-serif; }
+#b { font-family: 'Chilanka', sans-serif; } 
+#c { font-family: 'Dyuthi', sans-serif; } 
+#d { font-family: 'Gayathri', sans-serif; }
+#e { font-family: 'Karumbi', sans-serif; }
+#f { font-family: 'Keraleeyam', sans-serif; } 
+#g { font-family: 'Manjari', sans-serif; }
+#h { font-family: 'Meera', sans-serif; }
+#i { font-family: 'Rachana', sans-serif; } 
+#j { font-family: 'RaghuMalayalamSans', sans-serif; } 
+#k { font-family: 'Suruma', sans-serif; }
+#l { font-family: 'Uroob', sans-serif; } 
+#m { font-family: 'Noto Sans Malayalam', sans-serif;}
+#n { font-family: 'Manorama Regular', sans-serif;  }
+  
