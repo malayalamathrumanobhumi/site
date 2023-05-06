@@ -20941,13 +20941,13 @@ screen and (-ms-high-contrast: none) {
 }
 
 .left-column {
-  flex-basis: 60%;
-  max-width: 60%;
+  flex-basis: 45%;
+  max-width: 45%;
 }
 
 .right-column {
-  flex-basis: 40%;
-  max-width: 40%;
+  flex-basis: 55%;
+  max-width: 55%;
 }
 
 @media (max-width: 768px) {
