@@ -20814,7 +20814,6 @@ screen and (-ms-high-contrast: none) {
   font-size: 35px;
   padding-top: 25px;
 }
-
 .articletext{
   font-family: 'Rachana', sans-serif;
   font-size: 16.5px;
@@ -20822,138 +20821,276 @@ screen and (-ms-high-contrast: none) {
   line-height: 18pt;
   text-align: justify;
 }
-
-
-
 .subhead-001-mlhd {
   font-family: 'Keraleeyam', sans-serif;
   font-size: 20px;
 }
-
 .subhead-002-ml {
   font-family: 'Keraleeyam', sans-serif;
   font-size: 17.5px;
 }
-
 .subhead-001-ml-dist {
   font-family: 'Keraleeyam', sans-serif;
   font-size: 19px;
 }
-
 .highlight-blks a {
   font-family: 'Rachana', sans-serif;
   font-size: 15px;
   margin-bottom: 10px;
   padding-bottom: 30px;
-
 }
-
 .subhead-002-mlrb {
   font-family: 'Rachana', sans-serif;
-  font-size: 14.5px;
+  font-size: 13.8px;
+  line-height: 12pt;
 }
-
 .content-ml-001reb {
   font-family: 'Rachana', sans-serif;
   font-size: 13px;
 }
-
 @media only screen and (max-width: 768px) {
   .mm-container.ml-top-nav {
   display: none;
   }
   }
-
-  .content-ml-001 a {
+.content-ml-001 a {
     font-family: 'Rachana', sans-serif;
   font-size: 13px;
   }
-
 .content-ml-0012 {
   font-family: 'Rachana', sans-serif;
   font-size: 14.5px;
   text-align: left;
 }
-
 .subhead-001-mll {
   font-family: 'Keraleeyam', sans-serif;
   font-size: 16.5px;
 }
-
 .highlight-blk a {
   font-family: 'Keraleeyam', sans-serif;
   font-size: 22px;
 }
-
 .css-wbbhzvnyt {
   font-family: 'Rachana', sans-serif;
   font-size: 13.5px;
 }
-
 .css-1onhbftnyt {
   font-family: 'Keraleeyam', sans-serif;
   font-size: 22px;
 }
-
 .css-1onhbftnytdf {
   font-family: 'Keraleeyam', sans-serif;
   font-size: 22px;
 }
-
 .css-1oyjjn8df {
   font-family: 'Keraleeyam', sans-serif;
   font-size: 18px;
 }
-
 .css-1jmp9xko {
   font-family: 'Rachana', sans-serif;
   font-size: 12px;
-
 }
-
+/* ---------------------------------------------------FOOTER ELEMENTS STYLING---------------------------------- */
 #footer-note {
   text-align: center;
   font-family: 'Rachana', sans-serif;
   font-size: 12px;
-  padding-top: 25px;
+  padding-top: 5px;
   padding-bottom: 25px;
   padding-left: 10px;
   padding-right: 10px;
 }
-
-#footer-note p {
-
-}
-
 @media (max-width: 767px) {
   #footer-note p {
     margin-top: 5px;
   }
 }
-
 .linkc {
   color: blue;
 }
+/* ---------------------------------------------------FOOTER ELEMENTS STYLING---------------------------------- */
 
+
+/* ------------------------------------------------------ARTICLE PAGE BODY END--------------------------------- */
 .wrapper {
   display: flex;
   flex-wrap: wrap;
 }
-
 .left-column {
-  flex-basis: 45%;
-  max-width: 45%;
+  flex-basis: 60%;
+  max-width: 60%;
 }
-
 .right-column {
-  flex-basis: 55%;
-  max-width: 55%;
+  flex-basis: 40%;
+  max-width: 40%;
 }
-
 @media (max-width: 768px) {
   .left-column,
   .right-column {
     flex-basis: 100%;
     max-width: 100%;
   }
+}
+/* ------------------------------------------------------ARTICLE PAGE BODY END-------------------------------- */
+
+/* ---------------------------------------------------------LOGO TEXT START----------------------------------- */
+.mmbmlogo {
+  font-family: 'Keraleeyam', sans-serif;
+  color: rgb(7, 125, 214);
+  margin-bottom: -20px;
+}
+@media (min-width: 768px) { /* for desktop */
+  .mmbmlogo {
+    font-size: 75px;
+  }
+}
+@media (max-width: 767px) { /* for mobile */
+  .mmbmlogo {
+    font-size: 50px;
+    display: block;
+    line-height: 25pt;
+    margin-bottom: 5px;
+    margin-top: 30px;
+  }
+}
+/* ---------------------------------------------------------LOGO TEXT END------------------------------------ */
+
+/* ----------------------------------------------------DATE AND TIME ON HEADER------------------------------- */
+#datetime {
+  font-family: 'Keraleeyam', sans-serif;
+  color: black;
+}
+@media (min-width: 768px) { /* for desktop */
+  #datetime {
+    margin-top: 5px;
+    margin-bottom: -12px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) { /* for mobile */
+  #datetime {
+    font-size: 12px;
+    display: block;
+    line-height: 25pt;
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+}
+/* ----------------------------------------------------DATE AND TIME ON HEADER------------------------------- */
+/* -------------------------------------------------------FOOTER MOBILE MENU START-------------------------- */
+.mobile-footer-nav {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .mobile-footer-nav {
+      display: block;
+      bottom: 0;
+      left: 0;
+      text-align: left;
+      width: 100%;
+      padding-top: 15px;
+      padding-left: 20px;
+  }
+
+  .mobile-footer-nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  }
+
+  .mobile-footer-nav li {
+    padding: 3px;
+
+  }
+
+  .mobile-footer-nav a {
+      text-decoration: none;
+      color: #333;
+  }
+
+  .hrd {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin-right: 20px;
+}
+}
+/* -------------------------------------------------------FOOTER MOBILE MENU END----------------------------- */
+/* -------------------------------------------------------ARTICLE PAGE RIGHT COLUMN WEATHER WIDGET----------------------------- */
+.weatherwid {
+  padding-left: 75px;
+  padding-top: 25px;
+  padding-bottom:25px;
+}
+
+@media (max-width: 767px) {
+  .weatherwid {
+      display: none;
+  }
+}
+
+.busineswid {
+  padding-left: 75px;
+  padding-top: 25px;
+  padding-bottom:25px;
+
+}
+
+@media (max-width: 767px) {
+  .busineswid {
+      display: none;
+  }
+}
+
+/* ----------------------------------------------------text-overlays------------------------- */
+.world {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #fdcb6e;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Keraleeyam', sans-serif;
+  opacity: 75%;
+}
+
+.national {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #0984e3;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Keraleeyam', sans-serif;
+  opacity: 75%;
+}
+
+.state {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #55efc4;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Keraleeyam', sans-serif;
+  opacity: 75%;
+}
+
+
+.featimage {
+  max-width: 300px;
+  max-height: 150px;
+  display: block;
+}
+
+.articlebody {
+  font-family: 'Rachana', sans-serif;
+  font-size: 14.5px;
+  line-height: 13.5pt;
 }

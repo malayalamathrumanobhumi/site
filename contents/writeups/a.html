@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ml">
+  <head>
+    <title>മുഖം - സ്വതന്ത്ര അഭിപ്രായ പങ്കിടൽ വേദി | മലയാളമാതൃ മനോഭൂമി</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="robots" content="index,archive,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=yes" />
+    <meta name="description" content="ജനങ്ങൾക്കു സ്വതന്ത്രമായി ചിന്തിക്കാനും, പ്രകടിപ്പിക്കാനും, രീതികളും, ശൈലികളും നവീകരിക്കാനും ഉള്ള ഇടം." />
+    <meta name="keywords" content="മലയാളം, ജനം, ജനാധിപത്യം" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="../../assets/images/og/mmbm-og.png" />
+    <meta property="og:site_name" content="മലയാളമാതൃ മനോഭൂമി" />
+    <meta property="og:url" content="ജനങ്ങൾക്കു സ്വതന്ത്രമായി ചിന്തിക്കാനും, പ്രകടിപ്പിക്കാനും, രീതികളും, ശൈലികളും നവീകരിക്കാനും ഉള്ള ഇടം." />
+    <link rel="canonical" href="https://malayalamathrumanobhumi.github.io/site" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../assets/images/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="../../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="stylesheet" href="../../assets/css/clientlibs.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/font.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/nyt.css" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../assets/scripts/cs.js"></script>
+    <script src="../../assets/scripts/script.js"></script>
+    <link rel="stylesheet" href="../../assets/css/deferred-clientlibs.css" type="text/css" />
+  </head>
+  <body>
+    <script>
+// Specify the article name
+var articleName = "05072023-The_Panama_Papers_Unveiling_the_Veiled_Wealth";
+
+// Function to read a text file
+function readTextFile(file, callback) {
+    $.get(file, function(data) {
+        callback(data);
+    });
+}
+
+// Update HTML placeholders
+function updatePlaceholders() {
+    // Read article title
+    readTextFile("../../data/title/" + articleName + ".txt", function(title) {
+        $(".articlehead").text(title);
+    });
+
+    // Read article body
+    readTextFile("../../data/body/" + articleName + ".txt", function(body) {
+        body = body.replace(/<p>/g, "").replace(/<\/p>/g, ""); // Remove existing <p> tags
+        $(".articlebody").html("<p>" + body.replace(/\n/g, "<br>") + "</p>");
+    });
+
+    // Read featured image
+    var imgElement = $(".featimage");
+    if (imgElement.length) {
+        imgElement.attr("src", "http://192.168.58.1:8080/data/images/" + articleName + ".png");
+        imgElement.attr("alt", "Featured Image");
+    }
+}
+
+// Call the function to update placeholders
+updatePlaceholders();
+
+
+var folder = "../../data/images";
+var imageName = "05072023-The_Panama_Papers_Unveiling_the_Veiled_Wealth";
+
+// Construct the image source URL
+var imageUrl = folder + "/" + imageName + ".jpg";
+
+// Create the img element and set the source attribute
+var imgElement = $("<img>").attr("src", imageUrl);
+
+// Append the image element to the image container
+$(".image-container").append(imgElement);
+
+
+
+    </script>
+    <div id="header"></div>
+    <div class="mm-container-fluid">
+      <div class="mm-row">
+        <div class="mm-container">
+          <div class="wrapper">
+            <article>
+              <div class="left-column">
+                <section>
+                  <h1 class="articlehead"></h1>
+                </section>
+                <div class="image-container"></div>
+                <section>
+                  <img src="" alt="">
+                </section>
+                <section>
+                  <p class="articlebody"></p>
+                </section>
+              </div>
+            </article>
+            <div class="right-column"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+// Specify the article name
+var articleName = "05072023-The_Panama_Papers_Unveiling_the_Veiled_Wealth";
+
+// Function to read a text file
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status === 200) {
+            callback(rawFile.responseText);
+        }
+    };
+    rawFile.send(null);
+}
+
+// Update HTML placeholders
+function updatePlaceholders() {
+    // Read article title
+    readTextFile("../../data/title/" + articleName + ".txt", function(title) {
+        var titleElement = document.querySelector(".articlehead");
+        if (titleElement) {
+            titleElement.textContent = title;
+        }
+    });
+
+    // Read article body
+    readTextFile("../../data/body/" + articleName + ".txt", function(body) {
+        body = body.replace(/<p>/g, "").replace(/<\/p>/g, ""); // Remove existing <p> tags
+        var bodyElement = document.querySelector(".articlebody");
+        if (bodyElement) {
+            bodyElement.innerHTML = "<p>" + body.replace(/\n/g, "<br>") + "</p>";
+        }
+    });
+
+    // Read featured image
+    var imgElement = document.querySelector(".featimage");
+    if (imgElement) {
+        imgElement.setAttribute("src", "http://192.168.58.1:8080/data/images/" + articleName + ".png");
+        imgElement.setAttribute("alt", "Featured Image");
+    }
+}
+
+// Call the function to update placeholders
+updatePlaceholders();
