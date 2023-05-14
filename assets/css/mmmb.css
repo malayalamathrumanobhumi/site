@@ -26895,8 +26895,8 @@ screen and (-ms-high-contrast: none) {
 
 .artbody {
   font-family: 'mmmb-slo', sans-serif;
-  font-size: 18px;
-  line-height: 18pt;
+  font-size: 17px;
+  line-height: 17pt;
 }
 
 .author-name {
@@ -26957,7 +26957,14 @@ screen and (-ms-high-contrast: none) {
   line-height: 12.5pt;
 }
 
-div.EduZlJYetS9w.v-comment__comment {
-  font-family: 'mmmb-slo', sans-serif !important;
-  font-size: 18px !important;
+.pageBody h3 {
+  font-family: 'Keraleeyam', sans-serif;
+  font-size: 15px;
+  line-height: 12.5pt;
+}
+
+.pageBody li {
+  font-family: 'mmmb-slo', sans-serif;
+  font-size: 16px;
+  line-height: 12.5pt;
 }
