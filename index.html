@@ -21,11 +21,11 @@
     <link rel="stylesheet" href="./assets/css/nyt.css" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/scripts/script.js"></script>
-    <script src="./assets/scripts/rt.js"></script>    
+
   </head>
  
   <body>
-    <div id="header"></div>
+    <link rel="import" href="../templates/root/header.html">
      <div class="mm-container-fluid">
       <div class="mm-row special-template-block">
         <div class="mm-component">
@@ -720,6 +720,6 @@ $.getJSON('/data/articles.json', function(data) {
 });
 
 </script>
-  <div id="footer"></div>
+  <link rel="import" href="../templates/root/footer.html">
   </body>
 </html>
