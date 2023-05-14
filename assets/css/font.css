@@ -20,18 +20,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @font-face {
-    font-family: 'PanchariUniN';
-    src: url('/assets/fonts/PanchariUniN.woff2') format('woff2');
+    font-family: 'mmmb-slo';
+    src: url('/assets/fonts/mmmb-slo.woff2') format('woff2');
   }
   
   @font-face {
-    font-family: 'PanchariUniN';
-    src: url('/assets/fonts/PanchariUniB.woff2') format('woff2');
+    font-family: 'mmmb-sloB';
+    src: url('/assets/fonts/mmmb-sloB.woff2') format('woff2');
   }
 
   @font-face {
-    font-family: 'EGGIndulekhaUniB';
-    src: url('/assets/fonts/EGGIndulekhaUniB.woff2') format('woff2');
+    font-family: 'mmmblekhaB';
+    src: url('/assets/fonts/mmmblekhaB.woff2') format('woff2');
   }
 
 #a { font-family: 'AnjaliOldLipi', sans-serif; }
