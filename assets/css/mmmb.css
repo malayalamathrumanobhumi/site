@@ -26487,7 +26487,8 @@ screen and (-ms-high-contrast: none) {
 
 .wrapper {
   display: flex;
-  flex-wrap: wrap;
+
+
 }
 
 .left-column {
@@ -26796,6 +26797,8 @@ screen and (-ms-high-contrast: none) {
   height: auto;
   max-width: 100%;
   max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .author-image img {
@@ -26803,6 +26806,7 @@ screen and (-ms-high-contrast: none) {
   height: auto;
   max-width: 100%;
   max-height: 100%;
+  
 }
 
 /* Author Box Starts Here */
@@ -26813,6 +26817,7 @@ screen and (-ms-high-contrast: none) {
   background-color: #dfe6e9;
   border-radius: 7px;
   padding: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .author-box img {
@@ -26891,6 +26896,12 @@ screen and (-ms-high-contrast: none) {
 
 .artdate p {
   font-family: 'Roboto', sans-serif;
+  background-color: #ECEDF2;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 15px;
+  border-radius: 10px;
+
 }
 
 .artbody {
@@ -26942,7 +26953,7 @@ screen and (-ms-high-contrast: none) {
 .pageBody p {
   font-family: 'mmmb-slo', sans-serif;
   font-size: 16px;
-  line-height: 12.5pt;
+  line-height: 16.5pt;
 }
 
 .pageBody h1 {
@@ -26966,5 +26977,31 @@ screen and (-ms-high-contrast: none) {
 .pageBody li {
   font-family: 'mmmb-slo', sans-serif;
   font-size: 16px;
-  line-height: 12.5pt;
+  line-height: 13.5pt;
+}
+
+.writeformDesk {
+  text-align: center;
+  height: 1700px;
+}
+
+.signature p {
+  font-family: 'Karumbi', sans-serif;
+  font-size: 30px;
+}
+
+.supportable {
+  margin-top: 5px;
+  max-width: 100%;
+}
+
+.columnh1, .columnh2, .columnh3, .columnh4, .columnh5, .columnh6 {
+  font-family: 'Keraleeyam', sans-serif !important;
+  font-size: 16px !important;
+}
+
+.column1d,.column2d,.column3d,.column4d,.column5d,.column6d {
+  font-family: 'mmmb-slo', sans-serif !important;
+  font-size: 14px !important;
+
 }

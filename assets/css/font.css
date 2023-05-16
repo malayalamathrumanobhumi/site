@@ -11,12 +11,6 @@
 @import url('https://smc.org.in/fonts/suruma.css'); 
 @import url('https://smc.org.in/fonts/uroob.css');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@font-face { font-family: 'Manorama Regular'; src: url('../font/Manorama Regular.tf') format('truetype'); }
-@font-face {
-    font-family:"Manorama";
-    src:url("/assets/fonts/MANO31.eot") format("eot"),url("/assets/fonts/MANO31.woff") format("woff"),url("/assets/fonts/MANO31.ttf") format("truetype"),url("/assets/fonts/MANO31.svg#Manorama") format("svg");
-    font-weight:normal;font-style:normal;
-}
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 @font-face {
@@ -47,7 +41,5 @@
 #k { font-family: 'Suruma', sans-serif; }
 #l { font-family: 'Uroob', sans-serif; } 
 #m { font-family: 'Noto Sans Malayalam', sans-serif;}
-#n { font-family: 'Manorama Regular', sans-serif;  }
-#o { font-family: 'Manorama', sans-serif;  }
 #p { font-family: 'Roboto', sans-serif;}
   
