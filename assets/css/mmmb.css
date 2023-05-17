@@ -26487,8 +26487,7 @@ screen and (-ms-high-contrast: none) {
 
 .wrapper {
   display: flex;
-
-
+  flex-wrap: wrap;
 }
 
 .left-column {
@@ -26509,6 +26508,17 @@ screen and (-ms-high-contrast: none) {
     max-width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+
+  .right-column {
+    margin-left: 0px;
+    margin-right: 20px;
+    max-width: 100%;
+  }
+}
+
+
 
 .mmbmlogo {
   font-family: 'Keraleeyam', sans-serif;

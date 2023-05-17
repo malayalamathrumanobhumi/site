@@ -1,0 +1,19 @@
+.result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .result-image {
+    height: 40px;
+    width: auto;
+    max-width: 100%;
+    margin-right: 10px;
+  }
+  
+  .result-title {
+    flex: 1;
+    text-decoration: none;
+    color: #000;
+  }
+  
