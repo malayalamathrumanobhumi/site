@@ -74,7 +74,7 @@ fetch('/data/articles.json')
       link.style.textDecoration = 'none !important';
       link.style.padding = '50px !important';
       link.href = article_url.replace('./contents/', '/contents/'); // Replace "contents/" with "/contents/"
-      link.target = '_blank'; // Open link in a new tab
+      link.target = '_self'; // Open link in a new tab
       link.textContent = title;
 
       listItem.appendChild(link);
