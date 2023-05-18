@@ -26461,11 +26461,14 @@ screen and (-ms-high-contrast: none) {
   padding-bottom: 25px;
   padding-left: 10px;
   padding-right: 10px;
+  
 }
 
 @media (max-width: 767px) {
   #footer-note p {
     margin-top: 5px;
+    margin-bottom: 20px;
+    padding-bottom: 40px;
   }
 }
 
@@ -26552,7 +26555,7 @@ screen and (-ms-high-contrast: none) {
   font-family: 'Keraleeyam', sans-serif;
   color: black;
   padding-bottom: 0px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 @media (min-width: 768px) {
@@ -27014,4 +27017,12 @@ screen and (-ms-high-contrast: none) {
   font-family: 'mmmb-slo', sans-serif !important;
   font-size: 14px !important;
 
+}
+
+.corrections p{
+  font-family: 'mmmb-slo';
+}
+
+.thoughts p {
+  font-family: 'mmmb-slo';
 }
