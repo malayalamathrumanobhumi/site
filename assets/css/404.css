@@ -1,6 +1,20 @@
 .four h1 {
     font-family: 'Keraleeyam', sans-serif;
-    font-size: 40px;
-    padding: 150px;
+    font-size: 180px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    
+}
 
+.four h2 {
+    font-family: 'Keraleeyam', sans-serif;
+    font-size: 60px;
+    margin-top: 0px;    
+}
+
+.four {
+    background-color: dodgerblue !important;
+    padding : 100px;
+    color: aliceblue;
+    margin-bottom: -30px;
 }

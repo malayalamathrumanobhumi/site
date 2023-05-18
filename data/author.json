@@ -1,0 +1,26 @@
+[
+    {
+        "author_id" : 1 ,
+        "author_name" : "മൈക്കിൾ എ എൻ",
+        "e-mail": "malayalamathrumanobhumi@outlook.com",
+        "linkedIn" : "https://www.linkedin.com",
+        "Twitter" : "https://www.twitter.com",
+        "Facebook" : "https://www.facebook.com",
+        "Instagram" : "https://www.instagram.com",
+        "Bio" : "ഒരു ശരാശരി മലയാളി ",
+        "Image_URL" : "/data/images/author/michael_a_n.png",
+        "Place" : "ഗ്രീൻലാൻഡ്"
+    },
+    {
+        "author_id" : 2 ,
+        "author_name" : "വീണ",
+        "e-mail": "malayalamathrumanobhumi@outlook.com",
+        "linkedIn" : "https://www.linkedin.com",
+        "Twitter" : "https://www.twitter.com",
+        "Facebook" : "https://www.facebook.com",
+        "Instagram" : "https://www.instagram.com",
+        "Bio" : "ഒരു മലയാളി ",
+        "Image_URL" : "/data/images/author/michael_a_n.png",
+        "Place" : "ഘടകം"
+    }
+]

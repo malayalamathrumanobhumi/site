@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-* {
+/* * {
 	box-sizing: border-box;
+} */
+
+.columnist {
+	align-items: center;
+	
+	margin-bottom: 20px;
+
 }
-
-
 
 h3 {
 	margin: 10px 0;
@@ -95,15 +100,18 @@ button.primary.ghost {
 	padding: 7px;
 }
 
+.columnist p {
+	font-family: 'Keraleeyam', sans-serif;
+	font-size: 25px;
 
-
-
+}
 
 .author-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center; /* Center items horizontally */
+	
   }
 
 
@@ -118,10 +126,24 @@ button.primary.ghost {
     }
   }
   
+
+  a.primary {
+	background-color: #4cb9fc;
+	color: #333;
+	padding: 10px 15px;
+	border-radius: 5px;
+	text-decoration: none;
+	font-family: 'mmmb-slo';
+  }
   
+  a.primary:hover {
+	background-color: #ffc83b;
+  }
+  
+  a.primary:active {
+	background-color: #ffc83b;
+  }
 
-.columist p {
-    font-family: 'mmmb-slo';
-    
-}
 
+
+ 

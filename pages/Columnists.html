@@ -17,6 +17,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
     <link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="stylesheet" href="/assets/css/mmmb.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/columnist.css" type="text/css" />
     <link rel="stylesheet" href="/assets/css/nyt.css" type="text/css" />
     <link rel="stylesheet" href="/assets/css/font.css" type="text/css" />
     <link rel="stylesheet" href="/assets/css/author.css" type="text/css" />
@@ -29,54 +30,68 @@
     <div class="mm-container-fluid">
       <div class="mm-row">
           <div class="mm-container">
-              <!-- <div class="wrapper"> -->
-
-                    <section>
-                      <div class="columist" style="text-align: center;">
-                        <p>ഇവിടെ എഴുതുന്ന എല്ലാവരുടെയും ചുരുക്കവിവരം നൽകുന്ന താൾ ആണ് ഇത്. 
-                        ഏറ്റവും കൂടുതൽ ലേഖനങ്ങൾ  എഴുതിയ വ്യക്തി ആദ്യം എന്ന വരിയിൽ ആയിരിക്കും പ്രദർശിപ്പിക്കുക.</p>
-          
-                      </div>
-                    </section>
-
-
-
-                   <div class="author-container">
-                   
-                      <section>
-                        <div class="author-card">
-                          <div class="card-container">
-                            <span class="pro"></span>
-                            <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
-                            <h3>പേര്</h3>
-                            <h6>സ്ഥലം</h6>
-                            <p>ചുരുക്ക വിവരം</p>
-                            <div class="buttons">
-                              <button class="primary">
-                                1
-                              </button>
-                              <button class="primary ghost">
-                                ഇ-മെയിൽ
-                              </button>
-                            </div>
-                            
-                          </div>
-                      </div>
-                      </section>
-                      
-                    </div>
-
-                    
-
-                   
-                    
-                    
-
-
-
-
-
-
+            <div class="columnist">
+              <p>അഭിപ്രായം പറയുന്ന ജനങ്ങൾ</p>
+              <hr>
+            </div>
+              <div class="wrapper">
+                
+                <div>
+                  <div class="author-container"></div>
+                </div>
+                
+                     
+                <script>
+                    // Fetching data from articles.json
+                    fetch('/data/articles.json')
+                        .then(response => response.json())
+                        .then(articlesData => {
+                            const authorsCount = {};
+                
+                            // Counting articles for each author
+                            articlesData.forEach(article => {
+                                const authorId = article.author_id;
+                                authorsCount[authorId] = (authorsCount[authorId] || 0) + 1;
+                            });
+                
+                            // Sorting authors based on article count
+                            const sortedAuthors = Object.keys(authorsCount).sort((a, b) => authorsCount[b] - authorsCount[a]);
+                
+                            const authorContainer = document.querySelector('.author-container');
+                
+                            // Rendering author cards
+                            sortedAuthors.forEach(authorId => {
+                                // Fetching author data for each author
+                                fetch('/data/author.json')
+                                    .then(response => response.json())
+                                    .then(authorsData => {
+                                        const authorData = authorsData.find(author => author.author_id === parseInt(authorId));
+                
+                                        if (authorData) {
+                                            const { author_name, 'e-mail': email, Bio, Image_URL, Place } = authorData;
+                
+                                            // Creating author card HTML
+                                            const authorCard = document.createElement('div');
+                                            authorCard.classList.add('author-card');
+                                            authorCard.innerHTML = `
+                                                <div class="card-container">
+                                                    <span class="pro"></span>
+                                                    <img class="round" src="${Image_URL}" alt="${author_name}" />
+                                                    <h3>${author_name}</h3>
+                                                    <h6>${Place}</h6>
+                                                    <p>${Bio}</p>
+                                                    <div class="buttons">
+                                                        <a class="primary" href="/pages/author.html?authorId=${authorId}">${authorsCount[authorId]}</a>
+                                                        <a href="mailto:${email}" class="primary ghost">ഇ-മെയിൽ</a>
+                                                    </div>
+                                                </div>
+                                            `;
+                                            authorContainer.appendChild(authorCard);
+                                        }
+                                    });
+                            });
+                        });
+                </script>
               </div>
           </div>
       </div>
