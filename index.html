@@ -73,7 +73,7 @@
                           <div class="image-block">
                             <a href="" target="_self" title="">
                               <img alt="" src="" />
-                              <div class="world">അന്താരാഷ്ട്ര</div>
+                              
                             </a>
                           </div>
                           <p class="content-ml-001">
@@ -83,25 +83,25 @@
                       
                       <div class="story-list-02">
                         <div class="image-block">
-                          <a title="placeholder1" href="placeholder3" target="_self">
-                            <img alt="placeholder1" src="" />
-                            <div class="national">ദേശീയം</div>
+                          <a title="placeholder1" href="" target="_self">
+                            <img alt="" src="" />
+                            
                           </a>
                         </div>
                         <div class="subhead-002-ml">
-                          <a title="" href="placeholder3" key value from JSON file." target="_self">placeholder1</a>
+                          <a title="" href="" key value from JSON file." target="_self"></a>
                         </div>
                       </div>
                     
                       <div class="story-list-03">
                         <div class="image-block">
-                          <a title="placeholder4" href="placeholder6" target="_self">
-                            <img alt="placeholder4" src="" />
-                            <div class="state">ദേശീയം</div>
+                          <a title="" href="" target="_self">
+                            <img alt="" src="" />
+                            
                           </a>
                         </div>
                         <div class="subhead-002-ml">
-                          <a title="" href="placeholder6" target="_self">placeholder4</a>
+                          <a title="" href="" target="_self"></a>
                         </div>
                       </div>
                     </div>
@@ -336,8 +336,9 @@
                   <div class="special-story-blk">
                     <div class="content">
                       <a href="" target="_self">
-                        <div class="section-head-label-001 sec-news"> പരാതികൾ </div>
+                        <div class="section-head-label-001 sec-news">ജനങ്ങളുടെ പരാതികൾ</div>
                       </a>
+
                       <a href="" title="" target="_self">
                         <div class="subhead-001-ml-dist"></div>
                         <p class="content-ml-001"></p>
@@ -520,7 +521,7 @@ $.getJSON('/data/articles.json', function(data) {
   var pureText = tempElement.innerText;
 
   $('.special-story-blk .content a').eq(0).attr('href', articleUrl);
-  $('.special-story-blk .content .section-head-label-001').text('പരാതികൾ');
+  $('.special-story-blk .content .section-head-label-001').text('ജനങ്ങളുടെ പരാതികൾ');
   $('.special-story-blk .content a').eq(1).attr('href', articleUrl);
   $('.special-story-blk .content .subhead-001-ml-dist').text(title);
   $('.special-story-blk .content .content-ml-001').text(pureText.slice(0, 100) + '...');

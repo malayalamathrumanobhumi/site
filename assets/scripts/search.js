@@ -45,13 +45,14 @@ function performSearch() {
     if (query.length > 0) {
         results = articles.filter(function(article) {
             return (
+                article.article_id.toLowerCase().includes(query) ||
                 article.title.toLowerCase().includes(query) ||
                 article.body.toLowerCase().includes(query) ||
                 article.category.toLowerCase().includes(query) ||
                 article.tags.toLowerCase().includes(query) ||
                 article.author_bio.toLowerCase().includes(query) ||
                 article.author_name.toLowerCase().includes(query) ||
-                article.featured_imageUrl.toLowerCase().includes(query) ||
+                article.featured_small_image_Url.toLowerCase().includes(query) ||
                 article.article_url.toLowerCase().includes(query)
             );
         });
@@ -80,10 +81,11 @@ function displayResults(results) {
 
             resultItem.append(imageLink);
             resultItem.append(titleLink);
+            resultItem.append('<hr>'); // Add <hr> tag after each result item
             resultsContainer.append(resultItem);
         });
     } else {
-        resultsContainer.html('<p>No results found.</p>');
+        resultsContainer.html('<p>ഒരു ഫലവും കണ്ടെത്താനായില്ല.</p>');
     }
 }
 
