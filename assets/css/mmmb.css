@@ -26458,7 +26458,7 @@ screen and (-ms-high-contrast: none) {
   font-family: 'Rachana', sans-serif;
   font-size: 12px;
   padding-top: 5px;
-  padding-bottom: 25px;
+  padding-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
   
@@ -26467,8 +26467,8 @@ screen and (-ms-high-contrast: none) {
 @media (max-width: 767px) {
   #footer-note p {
     margin-top: 5px;
-    margin-bottom: 20px;
-    padding-bottom: 40px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
   }
 }
 
@@ -26917,7 +26917,7 @@ screen and (-ms-high-contrast: none) {
 
 }
 
-.artbody {
+.artbody p{
   font-family: 'mmmb-slo', sans-serif;
   font-size: 17px;
   line-height: 17pt;
@@ -26934,12 +26934,6 @@ screen and (-ms-high-contrast: none) {
   font-size: 14px;
   line-height: 15.5pt;
 
-}
-
-.arttags {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  display: none;
 }
 
 #policy {
@@ -27035,3 +27029,5 @@ screen and (-ms-high-contrast: none) {
   font-family: 'Keraleeyam', sans-serif;
   font-size: 20px;
 }
+
+

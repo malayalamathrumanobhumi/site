@@ -1,0 +1,57 @@
+.artbody p {
+  font-family: 'mmmb-slo' !important;
+}
+
+.artbody {
+  font-family: 'mmmb-slo' !important;
+}
+
+@media (min-width: 768px) {
+  .featimage {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .featimage {
+    display: none !important;
+  }
+}
+
+.featured_medium_image {
+  display: none;
+}
+
+.featured_small_image {
+  display: none;
+}
+
+.arttags {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display: none;
+}
+
+.category {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display: none;
+}
+
+.authorid {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display: none;
+}
+
+.vuukleid {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display: none;
+}
+
+.articleid {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  display: none;
+}
