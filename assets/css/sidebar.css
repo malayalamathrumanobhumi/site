@@ -1,0 +1,15 @@
+.sideimg {
+    max-width: 100%;
+    height: auto;
+  }
+
+.sidenews h3 {
+    font-family: 'Rachana', sans-serif;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.latest {
+    margin-top: 20px;
+}

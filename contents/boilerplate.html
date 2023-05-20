@@ -18,13 +18,14 @@
     <link rel="mask-icon" href="../../assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../../assets/scripts/cs.js" defer></script>
-    <script> var articleId = 33; console.log(articleId);</script>
+    <script> var articleId = 33;</script>
     <script src="../../assets/scripts/mmmb-api.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="../../assets/css/mmmb.css" type="text/css" />
     <link rel="stylesheet" href="../../assets/css/nyt.css" type="text/css" />
     <link rel="stylesheet" href="../../assets/css/font.css" type="text/css" />
-    <link rel="stylesheet" href="../../assets/css/article.css" type="text/css" />   
+    <link rel="stylesheet" href="../../assets/css/article.css" type="text/css" />
+    <link rel="stylesheet" href="../../assets/css/sidebar.css" type="text/css" />   
   </head>
   <body>
     <div id="header"></div>    
@@ -61,6 +62,7 @@
                           <div class="vuukleid"><p></p></div>
                           <div class="articleid"><p></p></div>  
                       </div>
+                      <div><hr></div>
                       <div class="vuukle">
                           <div class="vuukle-sharebar"></div>
                           <div id="vuukle-comments"></div>
@@ -154,7 +156,7 @@
                                 };
                 
                                 // Print the "url" property with the domain prepended to the console
-                                console.log(VUUKLE_CONFIG);
+                                // console.log(VUUKLE_CONFIG);
                 
                                 // Check if Vuukle library is already loaded
                                 if (typeof Vuukle === 'undefined') {
