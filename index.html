@@ -471,7 +471,7 @@
     //block 3 | 8 Head List Items | L8head
     $.getJSON('/data/articles.json', function(data) {
         var filteredObjects = data.filter(function(obj) {
-            return obj.category === 'State';
+            return obj.category === 'L8head';
         });
    
         filteredObjects.sort(function(a, b) {
@@ -547,14 +547,14 @@
     // Block 5 | 5 Head List Items | L5head5
     $.getJSON('/data/articles.json', function(data) {
         var filteredObjects = data.filter(function(obj) {
-            return obj.category === 'National';
+            return obj.category === 'L5head5';
         });
    
         filteredObjects.sort(function(a, b) {
             return new Date(b.date) - new Date(a.date);
         });
    
-        var offset = 2;
+        var offset = 0;
         var selectedObjects = filteredObjects.slice(offset, offset + 5);
    
         selectedObjects.forEach(function(obj, index) {
