@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+  }
+
+  .column {
+    flex: 1;
+    padding: 10px;
+  }
+
+  .column-a {
+    width: 40%;
+  }
+
+  .column-b {
+    width: 30%;
+  }
+
+  .column-c {
+    width: 30%;
+  }
+
+  .row {
+    height: 100%;
+  }
+
+  .row-d {
+    height: 60%;
+    background-color: aqua;
+  }
+
+  .row-e {
+    height: 40%;
+  }
