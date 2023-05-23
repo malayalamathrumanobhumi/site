@@ -569,10 +569,10 @@
     });
    
    
-    // Block 6 | 1 Head List Item | L6head1
+    // Block 6 | 1 Head List Item | L6head5
     $.getJSON('/data/articles.json', function(data) {
         var filteredObjects = data.filter(function(obj) {
-            return obj.category === 'L6head1';
+            return obj.category === 'L6head5';
         });
    
         filteredObjects.sort(function(a, b) {
@@ -598,13 +598,13 @@
     });
    
    
-    // Block 6 | 4 Head List Items | L6head4
+    // Block 6 | 4 Head List Items | L6head5
     fetch('/data/articles.json')
         .then(response => response.json())
         .then(data => {
-            const filteredArticles = data.filter(article => article.category === 'L6head4');
+            const filteredArticles = data.filter(article => article.category === 'L6head5');
             const sortedArticles = filteredArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
-            const selectedArticles = sortedArticles.slice(0, 5);
+            const selectedArticles = sortedArticles.slice(1, 5);
    
             const highlightList = document.querySelector('.highlight-blks ul');
             selectedArticles.forEach(article => {

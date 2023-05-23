@@ -26707,10 +26707,11 @@ screen and (-ms-high-contrast: none) {
 }
 
 .highlight-blks a {
-  font-family: 'Rachana', sans-serif;
-  font-size: 15px;
+  font-family: 'Keraleeyam', sans-serif;
+  font-size: 18px;
   margin-bottom: 10px;
   padding-bottom: 30px;
+
 }
 
 .subhead-002-mlrb {
@@ -26721,7 +26722,7 @@ screen and (-ms-high-contrast: none) {
 
 .content-ml-001reb {
   font-family: 'Keraleeyam', sans-serif;
-  font-size: 13px;
+  font-size: 14.5px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -26736,8 +26737,8 @@ screen and (-ms-high-contrast: none) {
 }
 
 .content-ml-0012 {
-  font-family: 'Rachana', sans-serif;
-  font-size: 14.5px;
+  font-family: 'Keraleeyam', sans-serif;
+  font-size: 17px;
   text-align: left;
 }
 
