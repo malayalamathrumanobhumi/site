@@ -1,0 +1,44 @@
+.full-width-bar {
+    background-color: #ff3333;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .full-width-bar .container {
+    padding: 0;
+  }
+  
+  /* Additional custom styles for the content within the container */
+  .full-width-bar .container .nav-link  {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: 'mmmb-slo';
+    font-size: 16.5px;
+    color : white;
+  }
+
+.col-sm-6 {
+    text-decoration: none;
+    text-align: center;   
+}
+
+.col-sm-6 a {
+    font-family: 'Keraleeyam', sans-serif;
+    font-size: 75px;
+    text-decoration: none;
+    padding-bottom: 0;
+}
+.col-sm-6 p {
+    font-family: 'mmmb-slo';
+    font-size: 15px;
+    margin-top: -30px;
+}
+
+#datetime {
+    font-family: 'mmmb-slo';
+    font-size: 15px;
+    margin-top: -100pxs;
+}
+
