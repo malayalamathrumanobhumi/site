@@ -14,6 +14,6 @@ $(document).ready(function() {
     $(".sidebar").html(data);
     
     // After inserting the sidebar template, load and execute the sidebar1.js script
-    $.getScript("../../assets/scripts/sidebar1.js");
+    $.getScript("../../assets/scripts/sidebar.js");
   });
 });
