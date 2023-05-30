@@ -26909,6 +26909,7 @@ content-ml-001bw a {
 /* article body styles  */
 .artitle h1 {
   font-family: 'Keraleeyam', sans-serif;
+  color: #636e72;
 }
 
 @media (max-width: 767px) {

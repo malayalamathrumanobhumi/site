@@ -1,15 +1,43 @@
-.sideimg {
-    max-width: 100%;
+.sidebarnew {
+    display: flex;
+    margin-top: 10px;
+    border-bottom: 0.5px solid gainsboro;
+    padding-bottom: 10px;
+    /* flex-wrap: wrap; */
+  }
+  
+  .imageo {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+  
+  .imageo img {
+    width: 100%;
     height: auto;
   }
+  
+  .tex {
+    flex: 0 0 60%;
+    max-width: 60%;
+    font-family: 'Keraleeyam', sans-serif;
+    font-size: 18.5px;
+    margin-left: 5px;
+    color: rgb(105, 104, 104);
+  }
 
-.sidenews h3 {
-    font-family: 'Rachana', sans-serif;
-    font-size: 14px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-.latest {
-    margin-top: 20px;
-}
+  .tex a {
+    color: rgb(105, 104, 104);
+  }
+  
+  @media (max-width: 768px) {
+    .sidebarnew {
+      flex-direction: column;
+    }
+  
+    .imageo,
+    .tex {
+      flex: 1 0 100%;
+      max-width: 100%;
+      font-size: 18px;
+    }
+  }
