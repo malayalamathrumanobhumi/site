@@ -697,7 +697,7 @@
   
   
   
-  // Block 6 | 1 Head List Item | L6head5
+  // // Block 6 | 1 Head List Item | L6head5
   function fetchDataAndRenderBlock6() {
       const storedData = localStorage.getItem('articlesData');
   
@@ -749,30 +749,30 @@
   
   
   // Block 6 | 4 Head List Items | L6head5
-  function fetchDataAndRenderBlock6() {
+  function fetchDataAndRenderBlock68() {
       const storedData = localStorage.getItem('articlesData');
   
       if (storedData) {
-          renderBlock6(JSON.parse(storedData)); // Use stored data if available
+          renderBlock68(JSON.parse(storedData)); // Use stored data if available
       } else {
-          fetchAndRenderBlock6();
+          fetchAndRenderBlock68();
       }
   }
   
-  function fetchAndRenderBlock6() {
+  function fetchAndRenderBlock68() {
       fetch('/data/articles.json')
           .then(response => response.json())
           .then(data => {
               localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
   
-              renderBlock6(data);
+              renderBlock68(data);
           })
           .catch(error => {
               console.log('Error fetching articles:', error);
           });
   }
   
-  function renderBlock6(data) {
+  function renderBlock68(data) {
       const filteredArticles = data.filter(article => article.category === 'L6head5');
       const sortedArticles = filteredArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
       const selectedArticles = sortedArticles.slice(1, 6);
@@ -790,7 +790,7 @@
   }
   
   // Call the function to fetch and render the data for Block 6
-  fetchDataAndRenderBlock6();
+  fetchDataAndRenderBlock68();
   
   
   
