@@ -395,507 +395,531 @@
     </div>
   </div>
 </div> 
-<script>
-// Fetch JSON data and store it if not already stored
-  function fetchData() {
-      return new Promise((resolve, reject) => {
-          const storedData = localStorage.getItem('articlesData');
-  
-          if (storedData) {
-              resolve(JSON.parse(storedData));
-          } else {
-              fetch('./data/articles.json')
-                  .then(response => response.json())
-                  .then(data => {
-                      localStorage.setItem('articlesData', JSON.stringify(data));
-                      resolve(data);
-                  })
-                  .catch(error => reject(error));
-          }
-      });
-  }
-  
-  // Block 1 | 1 Head List Item | Head
-  function fetchDataAndRender() {
-      const storedData = localStorage.getItem('articlesData');
-  
-      if (storedData) {
-          renderData(JSON.parse(storedData)); // Use stored data if available
-      } else {
-          fetchAndRender();
-      }
-  }
-  
-  function fetchAndRender() {
-      fetch('./data/articles.json')
-          .then(response => response.json())
-          .then(data => {
-              localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
-  
-              renderData(data);
-          })
-          .catch(error => {
-              console.log('Error:', error);
-          });
-  }
-  
-  function renderData(data) {
-      // Search and sort objects with the key value "Head"
-      const worldArticles = data.filter(article => article.category === 'Head');
-  
-      // Sort the list by date in descending order
-      worldArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
-  
-      // Get the latest article
-      const latestArticle = worldArticles[0];
-  
-      // Replace the placeholder content with the actual values from JSON
-      document.querySelector('.subhead-001-mlhd a').textContent = latestArticle.title;
-      document.querySelector('.subhead-001-mlhd a').href = latestArticle.article_url;
-      document.querySelector('.image-block a').href = latestArticle.article_url;
-      document.querySelector('.image-block a').title = latestArticle.title;
-      document.querySelector('.image-block img').alt = latestArticle.title;
-      document.querySelector('.image-block img').src = latestArticle.featured_imageUrl;
-      document.querySelector('.content-ml-001 a').textContent = latestArticle.title;
-      document.querySelector('.content-ml-001 a').href = latestArticle.article_url;
-      document.querySelector('.content-ml-001 a').title = latestArticle.title;
-  
-      // Extract the text from the "body" key value without HTML tags
-      const bodyContent = latestArticle.body.replace(/<\/?[^>]+(>|$)/g, "");
-      document.querySelector('.content-ml-001 a').innerText = bodyContent.slice(0, 184);
-  }
-  
-  // Call the function to fetch and render the data
-  fetchDataAndRender();
-  
-  // Block 2 | 2 Head List Items | Bhead
-  function fetchDataAndRenderBlock2() {
-      const storedData = localStorage.getItem('articlesData');
-  
-      if (storedData) {
-          renderBlock2(JSON.parse(storedData)); // Use stored data if available
-      } else {
-          fetchAndRenderBlock2();
-      }
-  }
-  
-  function fetchAndRenderBlock2() {
-      fetch('/data/articles.json')
-          .then(response => response.json())
-          .then(data => {
-              localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
-  
-              renderBlock2(data);
-          })
-          .catch(error => {
-              console.log('Error:', error);
-          });
-  }
-  
-  function renderBlock2(data) {
-      // Filter objects with "Bhead" category
-      const nationalArticles = data.filter(article => article.category === 'Bhead');
-  
-      // Sort articles by date in descending order
-      nationalArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
-  
-      // Select the latest two articles
-      const latestArticles = nationalArticles.slice(0, 2);
-  
-      // Update HTML blocks with article data
-      const block1 = document.querySelector('.story-list-02');
-      const block2 = document.querySelector('.story-list-03');
-  
-      // Update block 1
-      const block1TitleLink = block1.querySelector('.image-block a');
-      block1TitleLink.href = latestArticles[0].article_url;
-      block1TitleLink.title = latestArticles[0].title;
-      block1.querySelector('.image-block img').src = latestArticles[0].featured_medium_image_Url;
-      block1.querySelector('.subhead-002-ml a').href = latestArticles[0].article_url;
-      block1.querySelector('.subhead-002-ml a').textContent = latestArticles[0].title;
-      block1.querySelector('.subhead-002-ml a').setAttribute('aria-label', latestArticles[0].title); // Set accessibility text for title link
-      block1.querySelector('.image-block').setAttribute('aria-label', latestArticles[0].title); // Set accessibility text for image block
-  
-      // Update block 2
-      const block2TitleLink = block2.querySelector('.image-block a');
-      block2TitleLink.href = latestArticles[1].article_url;
-      block2TitleLink.title = latestArticles[1].title;
-      block2.querySelector('.image-block img').src = latestArticles[1].featured_medium_image_Url;
-      block2.querySelector('.subhead-002-ml a').href = latestArticles[1].article_url;
-      block2.querySelector('.subhead-002-ml a').textContent = latestArticles[1].title;
-      block2.querySelector('.subhead-002-ml a').setAttribute('aria-label', latestArticles[1].title); // Set accessibility text for title link
-      block2.querySelector('.image-block').setAttribute('aria-label', latestArticles[1].title); // Set accessibility text for image block
-  }
-  
-  // Call the function to fetch and render the data for Block 2
-  fetchDataAndRenderBlock2();
-  
-  
-  // Block 3 | 8 Head List Items | L8head
-  function fetchDataAndRenderBlock3() {
-      const storedData = localStorage.getItem('articlesData');
-  
-      if (storedData) {
-          renderBlock3(JSON.parse(storedData)); // Use stored data if available
-      } else {
-          fetchAndRenderBlock3();
-      }
-  }
-  
-  function fetchAndRenderBlock3() {
-      $.getJSON('/data/articles.json', function (data) {
-          localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
-  
-          renderBlock3(data);
-      });
-  }
-  
-  function renderBlock3(data) {
-      var filteredObjects = data.filter(function (obj) {
-          return obj.category === 'L8head';
-      });
-  
-      filteredObjects.sort(function (a, b) {
-          return new Date(b.date) - new Date(a.date);
-      });
-  
-      var latestObjects = filteredObjects.slice(0, 8);
-  
-      var targetElements = [
-          '.story-list-04',
-          '.story-list-05',
-          '.story-list-06',
-          '.story-list-07',
-          '.story-list-08',
-          '.story-list-09',
-          '.story-list-10',
-          '.story-list-11'
-      ];
-  
-      latestObjects.forEach(function (obj, index) {
-          var title = obj.title;
-          var articleUrl = obj.article_url;
-          var imageUrl = obj.featured_small_image_Url;
-  
-          var targetElement = targetElements[index];
-  
-          $(targetElement + ' .story-content a').eq(0).attr('title', title).attr('href', articleUrl);
-          $(targetElement + ' .story-content a').eq(0).find('img').attr('alt', title).attr('src', imageUrl);
-          $(targetElement + ' .story-content a').eq(1).attr('href', articleUrl);
-          $(targetElement + ' .story-content a').eq(2).attr('title', title).attr('href', articleUrl);
-          $(targetElement + ' .story-content a').eq(2).find('span').text(title);
-      });
-  }
-  
-  // Call the function to fetch and render the data for Block 3
-  fetchDataAndRenderBlock3();
-  
-  
-  
-  // Block 4 | 10 Head List Items | L10head
-  function fetchDataAndRenderBlock4() {
-      const storedData = localStorage.getItem('articlesData');
-  
-      if (storedData) {
-          renderBlock4(JSON.parse(storedData)); // Use stored data if available
-      } else {
-          fetchAndRenderBlock4();
-      }
-  }
-  
-  function fetchAndRenderBlock4() {
-      $.getJSON('/data/articles.json', function (data) {
-          localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
-  
-          renderBlock4(data);
-      });
-  }
-  
-  function renderBlock4(data) {
-      var filteredObjects = data.filter(function (obj) {
-          return obj.category === 'L10head';
-      });
-  
-      filteredObjects.sort(function (a, b) {
-          return new Date(b.date) - new Date(a.date);
-      });
-  
-      var latestObjects = filteredObjects.slice(0, 10);
-  
-      latestObjects.forEach(function (obj) {
-          var title = obj.title;
-          var articleUrl = obj.article_url;
-          var imageUrl = obj.featured_small_image_Url;
-  
-          var listItem = $('<li></li>');
-          var link1 = $('<a></a>').attr('href', articleUrl).attr('target', '_self').attr('title', title);
-          var imageBlock = $('<div></div>').addClass('image-block');
-          var image = $('<img />').attr('alt', title).attr('src', imageUrl).addClass('lazyload');
-          var link2 = $('<a></a>').attr('href', articleUrl).attr('target', '_self');
-          var link3 = $('<a></a>').attr('href', articleUrl).attr('target', '_self').attr('title', title);
-          var contentDiv = $('<div></div>').addClass('content-ml-001reb').text(title);
-  
-          imageBlock.append(image);
-          link1.append(imageBlock);
-          listItem.append(link1);
-          listItem.append(link2);
-          link3.append(contentDiv);
-          listItem.append(link3);
-  
-          $('.trending-news-blk ul').append(listItem);
-      });
-  }
-  
-  // Call the function to fetch and render the data for Block 4
-  fetchDataAndRenderBlock4();
-  
-  
-  // Block 5 | 5 Head List Items | L5head5
-  function fetchDataAndRenderBlock5() {
-      const storedData = localStorage.getItem('articlesData');
-  
-      if (storedData) {
-          renderBlock5(JSON.parse(storedData)); // Use stored data if available
-      } else {
-          fetchAndRenderBlock5();
-      }
-  }
-  
-  function fetchAndRenderBlock5() {
-      $.getJSON('/data/articles.json', function (data) {
-          localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
-  
-          renderBlock5(data);
-      });
-  }
-  
-  function renderBlock5(data) {
-      var filteredObjects = data.filter(function (obj) {
-          return obj.category === 'L5head5';
-      });
-  
-      filteredObjects.sort(function (a, b) {
-          return new Date(b.date) - new Date(a.date);
-      });
-  
-      var offset = 0;
-      var selectedObjects = filteredObjects.slice(offset, offset + 5);
-  
-      selectedObjects.forEach(function (obj, index) {
-          var title = obj.title;
-          var articleUrl = obj.article_url;
-          var imageUrl = obj.featured_medium_image_Url;
-  
-          $('.editorspick.section .ml-editors-pick-home ul li').eq(index).find('.image-block a').attr('href', articleUrl);
-          $('.editorspick.section .ml-editors-pick-home ul li').eq(index).find('.image-block img').attr('alt', title).attr('title', title).attr('src', imageUrl);
-          $('.editorspick.section .ml-editors-pick-home ul li').eq(index).find('.content-ml-001bw a').attr('href', articleUrl).text(title);
-      });
-  }
-  
-  // Call the function to fetch and render the data for Block 5
-  fetchDataAndRenderBlock5();
-  
-  
-  
-  // // Block 6 | 1 Head List Item | L6head5
-  function fetchDataAndRenderBlock6() {
-      const storedData = localStorage.getItem('articlesData');
-  
-      if (storedData) {
-          renderBlock6(JSON.parse(storedData)); // Use stored data if available
-      } else {
-          fetchAndRenderBlock6();
-      }
-  }
-  
-  function fetchAndRenderBlock6() {
-      $.getJSON('/data/articles.json', function (data) {
-          localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
-  
-          renderBlock6(data);
-      });
-  }
-  
-  function renderBlock6(data) {
-      var filteredObjects = data.filter(function (obj) {
-          return obj.category === 'L6head5';
-      });
-  
-      filteredObjects.sort(function (a, b) {
-          return new Date(b.date) - new Date(a.date);
-      });
-  
-      var latestObject = filteredObjects[0];
-  
-      var title = latestObject.title;
-      var articleUrl = latestObject.article_url;
-      var body = latestObject.body.slice(0, 100) + '...';
-  
-      // Create a temporary element to extract pure text
-      var tempElement = document.createElement('div');
-      tempElement.innerHTML = latestObject.body;
-      var pureText = tempElement.innerText;
-  
-      $('.special-story-blk .content a').eq(0).attr('href', articleUrl);
-      // $('.special-story-blk .content .section-head-label-001').text('സംസ്ഥന രാഷ്ട്രീയ വാർത്തകൾ');
-      $('.special-story-blk .content a').eq(1).attr('href', articleUrl);
-      $('.special-story-blk .content .subhead-001-ml-dist').text(title);
-      $('.special-story-blk .content .content-ml-001').text(pureText.slice(0, 100) + '...');
-  }
-  
-  // Call the function to fetch and render the data for Block 6
-  fetchDataAndRenderBlock6();
-  
-  
-  
-  // Block 6 | 4 Head List Items | L6head5
-  function fetchDataAndRenderBlock68() {
-      const storedData = localStorage.getItem('articlesData');
-  
-      if (storedData) {
-          renderBlock68(JSON.parse(storedData)); // Use stored data if available
-      } else {
-          fetchAndRenderBlock68();
-      }
-  }
-  
-  function fetchAndRenderBlock68() {
-      fetch('/data/articles.json')
-          .then(response => response.json())
-          .then(data => {
-              localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
-  
-              renderBlock68(data);
-          })
-          .catch(error => {
-              console.log('Error fetching articles:', error);
-          });
-  }
-  
-  function renderBlock68(data) {
-      const filteredArticles = data.filter(article => article.category === 'L6head5');
-      const sortedArticles = filteredArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
-      const selectedArticles = sortedArticles.slice(1, 6);
-  
-      const highlightList = document.querySelector('.highlight-blks ul');
-      selectedArticles.forEach(article => {
-          const listItem = document.createElement('li');
-          const link = document.createElement('a');
-          link.href = article.article_url;
-          link.target = '_self';
-          link.textContent = article.title;
-          listItem.appendChild(link);
-          highlightList.appendChild(listItem);
-      });
-  }
-  
-  // Call the function to fetch and render the data for Block 6
-  fetchDataAndRenderBlock68();
-  
-  
-  
-  // Block 7 | 1 Head List Item | L7head1
-  function fetchDataAndRenderBlock7() {
-      const storedData = localStorage.getItem('articlesData');
-  
-      if (storedData) {
-          renderBlock7(JSON.parse(storedData)); // Use stored data if available
-      } else {
-          fetchAndRenderBlock7();
-      }
-  }
-  
-  function fetchAndRenderBlock7() {
-      fetch('/data/articles.json')
-          .then(response => response.json())
-          .then(data => {
-              localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
-  
-              renderBlock7(data);
-          })
-          .catch(error => {
-              console.error(error);
-          });
-  }
-  
-  function renderBlock7(data) {
-      const filteredObjects = data.filter(obj => obj.category === 'L7head1');
-      const sortedObjects = filteredObjects.sort((a, b) => new Date(b.date) - new Date(a.date));
-      const latestObject = sortedObjects[0];
-  
-      const imageElement = document.querySelector('.image-blk img');
-      const linkElement = document.querySelector('.image-blk a');
-      const subheadElement = document.querySelector('.subhead-001-mllb');
-  
-      imageElement.src = latestObject.featured_imageUrl;
-      imageElement.alt = latestObject.title;
-      linkElement.href = latestObject.article_url;
-      linkElement.title = latestObject.title;
-      subheadElement.innerHTML = `<a href="${latestObject.article_url}" title="${latestObject.title}" target="_self">${latestObject.title}</a>`;
-  }
-  
-  // Call the function to fetch and render the data for Block 7
-  fetchDataAndRenderBlock7();
-  
-  
-  
-  // Block 8 | 2 Head List Items | L8head2
-  function fetchDataAndRenderBlock8() {
-      const storedData = localStorage.getItem('articlesData');
-  
-      if (storedData) {
-          renderBlock8(JSON.parse(storedData)); // Use stored data if available
-      } else {
-          fetchAndRenderBlock8();
-      }
-  }
-  
-  function fetchAndRenderBlock8() {
-      fetch('/data/articles.json')
-          .then(response => response.json())
-          .then(data => {
-              localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
-  
-              renderBlock8(data);
-          })
-          .catch(error => {
-              console.error(error);
-          });
-  }
-  
-  function renderBlock8(data) {
-      const filteredObjects = data.filter(obj => obj.category === 'L8head2');
-      const sortedObjects = filteredObjects.sort((a, b) => new Date(b.date) - new Date(a.date));
-  
-      const fetchedObjects = sortedObjects.slice(0, 2);
-  
-      const liElements = document.querySelectorAll('.mm-component-lib');
-  
-      liElements.forEach((li, index) => {
-          const obj = fetchedObjects[index];
-  
-          const link1 = li.querySelector('a:first-child');
-          link1.href = obj.article_url;
-          link1.title = obj.title;
-  
-          const image = li.querySelector('img');
-          image.alt = obj.title;
-          image.src = obj.featured_imageUrl;
-  
-          const link2 = li.querySelector('a:last-child');
-          link2.href = obj.article_url;
-          link2.title = obj.title;
-  
-          const content = li.querySelector('.content-ml-0012');
-          content.textContent = obj.title;
-      });
-  }
-  
-  // Call the function to fetch and render the data for Block 8
-  fetchDataAndRenderBlock8();</script>
-
-
-
+  <script>// Fetch JSON data and store it if not already stored or outdated
+    function fetchData() {
+        return new Promise((resolve, reject) => {
+            const storedData = localStorage.getItem('articlesData');
+            const storedVersion = localStorage.getItem('articlesDataVersion');
+    
+            // Check if stored data exists and is up to date
+            if (storedData && storedVersion) {
+                fetch('./data/version.json')
+                    .then(response => response.json())
+                    .then(serverVersion => {
+                        if (serverVersion !== storedVersion) {
+                            fetch('./data/articles.json')
+                                .then(response => response.json())
+                                .then(data => {
+                                    localStorage.setItem('articlesData', JSON.stringify(data));
+                                    localStorage.setItem('articlesDataVersion', serverVersion);
+                                    resolve(data);
+                                })
+                                .catch(error => reject(error));
+                        } else {
+                            resolve(JSON.parse(storedData));
+                        }
+                    })
+                    .catch(error => reject(error));
+            } else {
+                fetch('./data/articles.json')
+                    .then(response => response.json())
+                    .then(data => {
+                        const initialVersion = '1.0'; // Set an initial version
+                        localStorage.setItem('articlesData', JSON.stringify(data));
+                        localStorage.setItem('articlesDataVersion', initialVersion);
+                        resolve(data);
+                    })
+                    .catch(error => reject(error));
+            }
+        });
+    }
+    
+    
+    // Block 1 | 1 Head List Item | Head
+    function fetchDataAndRender() {
+        const storedData = localStorage.getItem('articlesData');
+    
+        if (storedData) {
+            renderData(JSON.parse(storedData)); // Use stored data if available
+        } else {
+            fetchAndRender();
+        }
+    }
+    
+    function fetchAndRender() {
+        fetch('./data/articles.json')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
+    
+                renderData(data);
+            })
+            .catch(error => {
+                console.log('Error:', error);
+            });
+    }
+    
+    function renderData(data) {
+        // Search and sort objects with the key value "Head"
+        const worldArticles = data.filter(article => article.category === 'Head');
+    
+        // Sort the list by date in descending order
+        worldArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+        // Get the latest article
+        const latestArticle = worldArticles[0];
+    
+        // Replace the placeholder content with the actual values from JSON
+        document.querySelector('.subhead-001-mlhd a').textContent = latestArticle.title;
+        document.querySelector('.subhead-001-mlhd a').href = latestArticle.article_url;
+        document.querySelector('.image-block a').href = latestArticle.article_url;
+        document.querySelector('.image-block a').title = latestArticle.title;
+        document.querySelector('.image-block img').alt = latestArticle.title;
+        document.querySelector('.image-block img').src = latestArticle.featured_imageUrl;
+        document.querySelector('.content-ml-001 a').textContent = latestArticle.title;
+        document.querySelector('.content-ml-001 a').href = latestArticle.article_url;
+        document.querySelector('.content-ml-001 a').title = latestArticle.title;
+    
+        // Extract the text from the "body" key value without HTML tags
+        const bodyContent = latestArticle.body.replace(/<\/?[^>]+(>|$)/g, "");
+        document.querySelector('.content-ml-001 a').innerText = bodyContent.slice(0, 184);
+    }
+    
+    // Call the function to fetch and render the data
+    fetchDataAndRender();
+    
+    
+    // Block 2 | 2 Head List Items | Bhead
+    function fetchDataAndRenderBlock2() {
+        const storedData = localStorage.getItem('articlesData');
+    
+        if (storedData) {
+            renderBlock2(JSON.parse(storedData)); // Use stored data if available
+        } else {
+            fetchAndRenderBlock2();
+        }
+    }
+    
+    function fetchAndRenderBlock2() {
+        fetch('./data/articles.json')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
+    
+                renderBlock2(data);
+            })
+            .catch(error => {
+                console.log('Error:', error);
+            });
+    }
+    
+    function renderBlock2(data) {
+        // Filter objects with "Bhead" category
+        const nationalArticles = data.filter(article => article.category === 'Bhead');
+    
+        // Sort articles by date in descending order
+        nationalArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+        // Select the latest two articles
+        const latestArticles = nationalArticles.slice(0, 2);
+    
+        // Update HTML blocks with article data
+        const block1 = document.querySelector('.story-list-02');
+        const block2 = document.querySelector('.story-list-03');
+    
+        // Update block 1
+        const block1TitleLink = block1.querySelector('.image-block a');
+        block1TitleLink.href = latestArticles[0].article_url;
+        block1TitleLink.title = latestArticles[0].title;
+        block1.querySelector('.image-block img').src = latestArticles[0].featured_medium_image_Url;
+        block1.querySelector('.subhead-002-ml a').href = latestArticles[0].article_url;
+        block1.querySelector('.subhead-002-ml a').textContent = latestArticles[0].title;
+        block1.querySelector('.subhead-002-ml a').setAttribute('aria-label', latestArticles[0].title); // Set accessibility text for title link
+        block1.querySelector('.image-block').setAttribute('aria-label', latestArticles[0].title); // Set accessibility text for image block
+    
+        // Update block 2
+        const block2TitleLink = block2.querySelector('.image-block a');
+        block2TitleLink.href = latestArticles[1].article_url;
+        block2TitleLink.title = latestArticles[1].title;
+        block2.querySelector('.image-block img').src = latestArticles[1].featured_medium_image_Url;
+        block2.querySelector('.subhead-002-ml a').href = latestArticles[1].article_url;
+        block2.querySelector('.subhead-002-ml a').textContent = latestArticles[1].title;
+        block2.querySelector('.subhead-002-ml a').setAttribute('aria-label', latestArticles[1].title); // Set accessibility text for title link
+        block2.querySelector('.image-block').setAttribute('aria-label', latestArticles[1].title); // Set accessibility text for image block
+    }
+    
+    // Call the function to fetch and render the data for Block 2
+    fetchDataAndRenderBlock2();
+    
+    
+    
+    // Block 3 | 8 Head List Items | L8head
+    function fetchDataAndRenderBlock3() {
+        const storedData = localStorage.getItem('articlesData');
+    
+        if (storedData) {
+            renderBlock3(JSON.parse(storedData)); // Use stored data if available
+        } else {
+            fetchAndRenderBlock3();
+        }
+    }
+    
+    function fetchAndRenderBlock3() {
+        $.getJSON('/data/articles.json', function (data) {
+            localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
+    
+            renderBlock3(data);
+        });
+    }
+    
+    function renderBlock3(data) {
+        var filteredObjects = data.filter(function (obj) {
+            return obj.category === 'L8head';
+        });
+    
+        filteredObjects.sort(function (a, b) {
+            return new Date(b.date) - new Date(a.date);
+        });
+    
+        var latestObjects = filteredObjects.slice(0, 8);
+    
+        var targetElements = [
+            '.story-list-04',
+            '.story-list-05',
+            '.story-list-06',
+            '.story-list-07',
+            '.story-list-08',
+            '.story-list-09',
+            '.story-list-10',
+            '.story-list-11'
+        ];
+    
+        latestObjects.forEach(function (obj, index) {
+            var title = obj.title;
+            var articleUrl = obj.article_url;
+            var imageUrl = obj.featured_small_image_Url;
+    
+            var targetElement = targetElements[index];
+    
+            $(targetElement + ' .story-content a').eq(0).attr('title', title).attr('href', articleUrl);
+            $(targetElement + ' .story-content a').eq(0).find('img').attr('alt', title).attr('src', imageUrl);
+            $(targetElement + ' .story-content a').eq(1).attr('href', articleUrl);
+            $(targetElement + ' .story-content a').eq(2).attr('title', title).attr('href', articleUrl);
+            $(targetElement + ' .story-content a').eq(2).find('span').text(title);
+        });
+    }
+    
+    // Call the function to fetch and render the data for Block 3
+    fetchDataAndRenderBlock3();
+    
+    
+    
+    // Block 4 | 10 Head List Items | L10head
+    function fetchDataAndRenderBlock4() {
+        const storedData = localStorage.getItem('articlesData');
+    
+        if (storedData) {
+            renderBlock4(JSON.parse(storedData)); // Use stored data if available
+        } else {
+            fetchAndRenderBlock4();
+        }
+    }
+    
+    function fetchAndRenderBlock4() {
+        $.getJSON('/data/articles.json', function (data) {
+            localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
+    
+            renderBlock4(data);
+        });
+    }
+    
+    function renderBlock4(data) {
+        var filteredObjects = data.filter(function (obj) {
+            return obj.category === 'L10head';
+        });
+    
+        filteredObjects.sort(function (a, b) {
+            return new Date(b.date) - new Date(a.date);
+        });
+    
+        var latestObjects = filteredObjects.slice(0, 10);
+    
+        latestObjects.forEach(function (obj) {
+            var title = obj.title;
+            var articleUrl = obj.article_url;
+            var imageUrl = obj.featured_small_image_Url;
+    
+            var listItem = $('<li></li>');
+            var link1 = $('<a></a>').attr('href', articleUrl).attr('target', '_self').attr('title', title);
+            var imageBlock = $('<div></div>').addClass('image-block');
+            var image = $('<img />').attr('alt', title).attr('src', imageUrl).addClass('lazyload');
+            var link2 = $('<a></a>').attr('href', articleUrl).attr('target', '_self');
+            var link3 = $('<a></a>').attr('href', articleUrl).attr('target', '_self').attr('title', title);
+            var contentDiv = $('<div></div>').addClass('content-ml-001reb').text(title);
+    
+            imageBlock.append(image);
+            link1.append(imageBlock);
+            listItem.append(link1);
+            listItem.append(link2);
+            link3.append(contentDiv);
+            listItem.append(link3);
+    
+            $('.trending-news-blk ul').append(listItem);
+        });
+    }
+    
+    // Call the function to fetch and render the data for Block 4
+    fetchDataAndRenderBlock4();
+    
+    
+    
+    // Block 5 | 5 Head List Items | L5head5
+    function fetchDataAndRenderBlock5() {
+        const storedData = localStorage.getItem('articlesData');
+    
+        if (storedData) {
+            renderBlock5(JSON.parse(storedData)); // Use stored data if available
+        } else {
+            fetchAndRenderBlock5();
+        }
+    }
+    
+    function fetchAndRenderBlock5() {
+        $.getJSON('/data/articles.json', function (data) {
+            localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
+    
+            renderBlock5(data);
+        });
+    }
+    
+    function renderBlock5(data) {
+        var filteredObjects = data.filter(function (obj) {
+            return obj.category === 'L5head5';
+        });
+    
+        filteredObjects.sort(function (a, b) {
+            return new Date(b.date) - new Date(a.date);
+        });
+    
+        var offset = 0;
+        var selectedObjects = filteredObjects.slice(offset, offset + 5);
+    
+        selectedObjects.forEach(function (obj, index) {
+            var title = obj.title;
+            var articleUrl = obj.article_url;
+            var imageUrl = obj.featured_medium_image_Url;
+    
+            $('.editorspick.section .ml-editors-pick-home ul li').eq(index).find('.image-block a').attr('href', articleUrl);
+            $('.editorspick.section .ml-editors-pick-home ul li').eq(index).find('.image-block img').attr('alt', title).attr('title', title).attr('src', imageUrl);
+            $('.editorspick.section .ml-editors-pick-home ul li').eq(index).find('.content-ml-001bw a').attr('href', articleUrl).text(title);
+        });
+    }
+    
+    // Call the function to fetch and render the data for Block 5
+    fetchDataAndRenderBlock5();
+    
+    
+    
+    
+    // Block 6 | 1 Head List Item | L6head5
+    function fetchDataAndRenderBlock6() {
+        const storedData = localStorage.getItem('articlesData');
+    
+        if (storedData) {
+            renderBlock6(JSON.parse(storedData)); // Use stored data if available
+        } else {
+            fetchAndRenderBlock6();
+        }
+    }
+    
+    function fetchAndRenderBlock6() {
+        $.getJSON('/data/articles.json', function (data) {
+            localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
+    
+            renderBlock6(data);
+        });
+    }
+    
+    function renderBlock6(data) {
+        var filteredObjects = data.filter(function (obj) {
+            return obj.category === 'L6head5';
+        });
+    
+        filteredObjects.sort(function (a, b) {
+            return new Date(b.date) - new Date(a.date);
+        });
+    
+        var latestObject = filteredObjects[0];
+    
+        var title = latestObject.title;
+        var articleUrl = latestObject.article_url;
+        var body = latestObject.body.slice(0, 100) + '...';
+    
+        // Create a temporary element to extract pure text
+        var tempElement = document.createElement('div');
+        tempElement.innerHTML = latestObject.body;
+        var pureText = tempElement.innerText;
+    
+        $('.special-story-blk .content a').eq(0).attr('href', articleUrl);
+        // $('.special-story-blk .content .section-head-label-001').text('സംസ്ഥന രാഷ്ട്രീയ വാർത്തകൾ');
+        $('.special-story-blk .content a').eq(1).attr('href', articleUrl);
+        $('.special-story-blk .content .subhead-001-ml-dist').text(title);
+        $('.special-story-blk .content .content-ml-001').text(pureText.slice(0, 100) + '...');
+    }
+    
+    // Call the function to fetch and render the data for Block 6
+    fetchDataAndRenderBlock6();
+    
+    
+    
+    
+    // Block 6A | 4 Head List Items | L6head5
+    function fetchDataAndRenderBlock68() {
+        const storedData = localStorage.getItem('articlesData');
+    
+        if (storedData) {
+            renderBlock68(JSON.parse(storedData)); // Use stored data if available
+        } else {
+            fetchAndRenderBlock68();
+        }
+    }
+    
+    function fetchAndRenderBlock68() {
+        fetch('/data/articles.json')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
+    
+                renderBlock68(data);
+            })
+            .catch(error => {
+                console.log('Error fetching articles:', error);
+            });
+    }
+    
+    function renderBlock68(data) {
+        const filteredArticles = data.filter(article => article.category === 'L6head5');
+        const sortedArticles = filteredArticles.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const selectedArticles = sortedArticles.slice(1, 6);
+    
+        const highlightList = document.querySelector('.highlight-blks ul');
+        selectedArticles.forEach(article => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = article.article_url;
+            link.target = '_self';
+            link.textContent = article.title;
+            listItem.appendChild(link);
+            highlightList.appendChild(listItem);
+        });
+    }
+    
+    // Call the function to fetch and render the data for Block 6A
+    fetchDataAndRenderBlock68();
+    
+    
+    
+    
+    // Block 7 | 1 Head List Item | L7head1
+    function fetchDataAndRenderBlock7() {
+        const storedData = localStorage.getItem('articlesData');
+    
+        if (storedData) {
+            renderBlock7(JSON.parse(storedData)); // Use stored data if available
+        } else {
+            fetchAndRenderBlock7();
+        }
+    }
+    
+    function fetchAndRenderBlock7() {
+        fetch('/data/articles.json')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
+    
+                renderBlock7(data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+    
+    function renderBlock7(data) {
+        const filteredObjects = data.filter(obj => obj.category === 'L7head1');
+        const sortedObjects = filteredObjects.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const latestObject = sortedObjects[0];
+    
+        const imageElement = document.querySelector('.image-blk img');
+        const linkElement = document.querySelector('.image-blk a');
+        const subheadElement = document.querySelector('.subhead-001-mllb');
+    
+        imageElement.src = latestObject.featured_imageUrl;
+        imageElement.alt = latestObject.title;
+        linkElement.href = latestObject.article_url;
+        linkElement.title = latestObject.title;
+        subheadElement.innerHTML = `<a href="${latestObject.article_url}" title="${latestObject.title}" target="_self">${latestObject.title}</a>`;
+    }
+    
+    // Call the function to fetch and render the data for Block 7
+    fetchDataAndRenderBlock7();
+    
+    
+    
+    // Block 8 | 2 Head List Items | L8head2
+    function fetchDataAndRenderBlock8() {
+        const storedData = localStorage.getItem('articlesData');
+    
+        if (storedData) {
+            renderBlock8(JSON.parse(storedData)); // Use stored data if available
+        } else {
+            fetchAndRenderBlock8();
+        }
+    }
+    
+    function fetchAndRenderBlock8() {
+        fetch('/data/articles.json')
+            .then(response => response.json())
+            .then(data => {
+                localStorage.setItem('articlesData', JSON.stringify(data)); // Store the data in localStorage
+    
+                renderBlock8(data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+    
+    function renderBlock8(data) {
+        const filteredObjects = data.filter(obj => obj.category === 'L8head2');
+        const sortedObjects = filteredObjects.sort((a, b) => new Date(b.date) - new Date(a.date));
+    
+        const fetchedObjects = sortedObjects.slice(0, 2);
+    
+        const liElements = document.querySelectorAll('.mm-component-lib');
+    
+        liElements.forEach((li, index) => {
+            const obj = fetchedObjects[index];
+    
+            const link1 = li.querySelector('a:first-child');
+            link1.href = obj.article_url;
+            link1.title = obj.title;
+    
+            const image = li.querySelector('img');
+            image.alt = obj.title;
+            image.src = obj.featured_imageUrl;
+    
+            const link2 = li.querySelector('a:last-child');
+            link2.href = obj.article_url;
+            link2.title = obj.title;
+    
+            const content = li.querySelector('.content-ml-0012');
+            content.textContent = obj.title;
+        });
+    }
+    
+    // Call the function to fetch and render the data for Block 8
+    fetchDataAndRenderBlock8();
+  </script>
   <div id="footer"></div>
   </body>
 </html>
